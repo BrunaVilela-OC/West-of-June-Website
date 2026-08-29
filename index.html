@@ -49,14 +49,41 @@
   }
   @media (max-width: 640px) {
     header, section, footer { padding-left: 18px !important; padding-right: 18px !important; }
-    nav { position: static !important; padding: 0 18px !important; }
-    [data-nav-inner] { flex-wrap: nowrap !important; justify-content: space-between !important; padding: 12px 0 !important; }
-    [data-nav-logo] { flex-direction: row !important; align-items: center !important; gap: 10px !important; }
-    [data-nav-logo] > svg { width: 46px !important; height: 28px !important; }
-    [data-nav-logo] span span:first-child { font-size: 18px !important; }
-    [data-nav-logo] span span:last-child { font-size: 8px !important; letter-spacing: .32em !important; }
-    [data-nav-links] { gap: 12px !important; font-size: 9px !important; letter-spacing: .08em !important; flex-wrap: wrap; justify-content: flex-end; }
-    [data-nav-links] a:last-child { padding: 7px 11px !important; }
+
+    /* nav becomes two rows: lockup centred, then full-width menu at readable size */
+    nav { position: static !important; padding: 0 !important; }
+    [data-nav-inner] { flex-direction: column !important; flex-wrap: nowrap !important; align-items: stretch !important; gap: 0 !important; padding: 0 !important; }
+    [data-nav-logo] { gap: 6px !important; padding: 16px 18px 14px !important; }
+    [data-nav-logo] > svg { width: 58px !important; height: 35px !important; }
+    [data-nav-logo] span span:first-child { font-size: 21px !important; }
+    [data-nav-logo] span span:last-child { font-size: 9px !important; letter-spacing: .38em !important; }
+    [data-nav-links] { gap: 0 !important; font-size: 13px !important; letter-spacing: .14em !important;
+      flex-wrap: nowrap !important; justify-content: stretch !important;
+      border-top: 1px solid rgba(31,45,61,.12); }
+    [data-nav-links] > a { flex: 1 1 0 !important; display: flex !important; align-items: center !important;
+      justify-content: center !important; min-height: 46px !important; padding: 0 4px !important;
+      border: 0 !important; border-right: 1px solid rgba(31,45,61,.1) !important; }
+    [data-nav-links] > a:last-child { border-right: 0 !important; }
+    [data-nav-links] > a { white-space: nowrap !important; }
+
+    /* readable type floor for body copy and labels */
+    p, li, [style*="font-size:17px"], [style*="font-size: 17px"] { font-size: 17px !important; line-height: 1.68 !important; }
+    [style*="font-size:19px"], [style*="font-size: 19px"] { font-size: 18px !important; line-height: 1.7 !important; }
+    [style*="font-size:11px"], [style*="font-size: 11px"] { font-size: 11.5px !important; letter-spacing: .2em !important; }
+    [style*="font-size:16px"], [style*="font-size: 16px"] { font-size: 16.5px !important; }
+    [style*="font-size:13px"], [style*="font-size: 13px"] { font-size: 13px !important; }
+
+    /* tap targets — 16px only on fields (stops iOS zoom); buttons keep their authored size */
+    button, [data-cta] { min-height: 48px !important; }
+    [data-cta] { padding-left: 24px !important; padding-right: 24px !important; letter-spacing: .16em !important; }
+    input, textarea { min-height: 48px !important; font-size: 16px !important; }
+    [data-nav-links] > a, footer a { min-height: 44px; }
+    footer a { display: inline-flex !important; align-items: center !important; }
+  }
+  @media (max-width: 380px) {
+    [data-nav-links] { font-size: 11.5px !important; letter-spacing: .06em !important; }
+    [data-nav-links] > a { padding: 0 2px !important; }
+    [data-cta] { font-size: 12px !important; letter-spacing: .1em !important; padding-left: 18px !important; padding-right: 18px !important; }
   }
 </style>
 </helmet>
@@ -88,7 +115,7 @@
 
   <section style="display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.82fr);gap:88px;align-items:center;padding:110px 48px 150px;max-width:1180px;margin:0 auto;min-height:86vh">
     <div>
-      <div data-reveal="" style="opacity:0;transform:translateY(24px);font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:#DC5B2E;margin-bottom:26px">Editorial producing for podcasts and YouTube channels</div>
+      <div data-reveal="" style="opacity:0;transform:translateY(24px);font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:#DC5B2E;margin-bottom:26px">Showrunning &amp; creative production for podcasts + YouTube channels</div>
       <h1 data-reveal="" style="opacity:0;transform:translateY(24px);font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(44px,5.2vw,76px);line-height:1.02;letter-spacing:-.025em;margin:0 0 34px">Hi, I'm Bruna.<br><span style="color:#DC5B2E;font-style:italic;white-space:nowrap">I run your show.</span></h1>
       <p data-reveal="" style="opacity:0;transform:translateY(24px);max-width:540px;font-size:19px;line-height:1.75;font-weight:300;color:rgba(31,45,61,.85);text-wrap:pretty;margin:0 0 38px">On a June morning I walked away from everything certain and headed west. That's what this company is. The unknown. The horizon. The bet on something better. If you're building something worth the risk, I'd love to be part of your adventure.</p>
       <div data-reveal="" style="opacity:0;transform:translateY(24px);display:flex;align-items:center;gap:28px;flex-wrap:wrap">
