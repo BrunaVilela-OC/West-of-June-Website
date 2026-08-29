@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: #FDF7EE; color: #1F2D3D; }
+  @keyframes wojsunC { 0%,100% { opacity: .82; transform: translateX(-50%) translateY(8px) scale(.97); } 50% { opacity: 1; transform: translateX(-50%) translateY(0) scale(1.03); } }
+  @keyframes wojsunR { 0%,100% { opacity: .82; transform: translateY(8px) scale(.97); } 50% { opacity: 1; transform: translateY(0) scale(1.03); } }
+  @keyframes wojhaloC { 0%,100% { opacity: .6; transform: translateX(-50%) scale(.94); } 50% { opacity: 1; transform: translateX(-50%) scale(1.06); } }
+  @keyframes wojhaloR { 0%,100% { opacity: .6; transform: scale(.94); } 50% { opacity: 1; transform: scale(1.06); } }
+  @keyframes wojshift { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+  @keyframes wojpulse { 0%,100% { opacity: .85; } 50% { opacity: 1; } }
+  a { color: #DC5B2E; text-decoration: none; }
+  a:hover { color: #1F2D3D; }
+
+  @media (hover: none) {
+    [data-svc-row], [data-row] { background: transparent !important; box-shadow: none !important; padding-left: 0 !important; padding-right: 0 !important; }
+  }
+  @media (max-width: 900px) {
+    html, body { overflow-x: hidden; }
+    nav { padding: 0 20px !important; }
+    [data-nav-inner] { flex-wrap: wrap !important; justify-content: center !important; row-gap: 14px !important; padding: 14px 0 !important; }
+    [data-nav-links] { gap: 18px !important; font-size: 11px !important; flex-wrap: wrap; justify-content: center; }
+    header, section, footer { padding-left: 20px !important; padding-right: 20px !important; }
+    [style*="grid-template-columns"] { grid-template-columns: minmax(0,1fr) !important; }
+    [data-m-photos] { grid-template-columns: repeat(2,minmax(0,1fr)) !important; }
+    h1 [style*="nowrap"], h2 [style*="nowrap"] { white-space: normal !important; }
+    img, svg, iframe, image-slot { max-width: 100%; }
+    footer > div, [data-home-footer] { flex-wrap: wrap !important; row-gap: 24px !important; }
+    [style*="text-align: right"] { text-align: left !important; }
+    [style*="gap: 88px"], [style*="gap: 80px"], [style*="gap: 72px"], [style*="gap: 64px"], [style*="gap: 56px"], [style*="gap: 48px"], [style*="gap: 44px"] { gap: 34px !important; }
+    [style*="110px 48px 150px"] { padding-top: 60px !important; padding-bottom: 76px !important; }
+    [style*="120px 48px 200px"] { padding-top: 68px !important; padding-bottom: 132px !important; }
+    [style*="96px 48px 104px"] { padding-top: 62px !important; padding-bottom: 70px !important; }
+    [style*="88px 48px"] { padding-top: 58px !important; }
+    [style*="76px 48px"] { padding-top: 54px !important; padding-bottom: 54px !important; }
+    [style*="max-width"][style*="48px"], [style*="max-width"][style*=" 48px"] { padding-left: 20px !important; padding-right: 20px !important; }
+  }
+  @media (max-width: 640px) {
+    header, section, footer { padding-left: 18px !important; padding-right: 18px !important; }
+    nav { position: static !important; padding: 0 18px !important; }
+    [data-nav-inner] { flex-wrap: nowrap !important; justify-content: space-between !important; padding: 12px 0 !important; }
+    [data-nav-logo] { flex-direction: row !important; align-items: center !important; gap: 10px !important; }
+    [data-nav-logo] > svg { width: 46px !important; height: 28px !important; }
+    [data-nav-logo] span span:first-child { font-size: 18px !important; }
+    [data-nav-logo] span span:last-child { font-size: 8px !important; letter-spacing: .32em !important; }
+    [data-nav-links] { gap: 12px !important; font-size: 9px !important; letter-spacing: .08em !important; flex-wrap: wrap; justify-content: flex-end; }
+    [data-nav-links] a:last-child { padding: 7px 11px !important; }
+  }
+</style>
+</helmet>
+<div style="font-family:Jost,system-ui,sans-serif;background:#FDF7EE;color:#1F2D3D">
+
+  <nav style="position:sticky;top:0;z-index:40;padding:0 48px;background:rgba(253,247,238,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(31,45,61,.1)">
+    <div data-nav-inner="" style="max-width:1180px;margin:0 auto;padding:20px 0;display:flex;align-items:center;justify-content:space-between">
+    <a data-nav-logo="" href="/" style="display:flex;flex-direction:column;align-items:center;gap:8px;color:#1F2D3D">
+      <svg width="74" height="45" viewBox="0 0 100 60" fill="none" style="flex:none">
+        <defs><linearGradient id="navSunAbt" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#DC5B2E"></stop><stop offset="100%" stop-color="#F0B429"></stop></linearGradient></defs>
+        <path d="M31 43 A19 19 0 0 1 69 43 Z" fill="url(#navSunAbt)"></path>
+        <line x1="2" y1="43" x2="98" y2="43" stroke="#1F2D3D" stroke-width="3.4"></line>
+      </svg>
+      <span style="display:flex;flex-direction:column;align-items:center;gap:4px">
+        <span style="font-family:'Playfair Display',serif;font-size:24px;line-height:1;white-space:nowrap">West of June</span>
+        <span style="font-size:10px;letter-spacing:.44em;text-transform:uppercase;color:#DC5B2E;padding-left:.44em">Media</span>
+      </span>
+    </a>
+    <div data-nav-links="" style="display:flex;align-items:center;gap:34px;font-size:13px;letter-spacing:.16em;text-transform:uppercase">
+      <a href="work.html" style="color:#1F2D3D" style-hover="color:#DC5B2E">My Work</a>
+      <a href="services.html" style="color:#1F2D3D" style-hover="color:#DC5B2E">How I Help</a>
+      <a href="about.html" style="color:#DC5B2E">My Story</a>
+      <a href="contact.html" style="color:#1F2D3D;padding:10px 20px;border:1px solid rgba(31,45,61,.35)" style-hover="background:#1F2D3D;color:#FDF7EE">Let’s Talk</a>
+    </div>
+  </div>
+  </nav>
+
+  <div style="height:6px;background:linear-gradient(100deg,#DC5B2E 0%,#F0B429 50%,#DC5B2E 100%);background-size:220% 100%;animation:wojshift 11s ease-in-out infinite"></div>
+
+  <section style="padding:88px 48px 0;max-width:860px;margin:0 auto">
+    <div data-reveal="" style="opacity:0;transform:translateY(24px);font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:#DC5B2E;margin-bottom:22px">About</div>
+    <h1 data-reveal="" style="opacity:0;transform:translateY(24px);font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(38px,4.6vw,64px);line-height:1.08;letter-spacing:-.015em;margin:0 0 22px">You're deciding whether to trust me with your show. <span style="color:#DC5B2E;font-style:italic">Fair.</span></h1>
+  </section>
+
+  <section data-reveal="" style="opacity:0;transform:translateY(24px);padding:56px 48px 92px;max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:28px;font-size:19px;font-weight:300;line-height:1.8;color:rgba(31,45,61,.88);text-wrap:pretty">
+    <p style="margin:0;font-family:'Playfair Display',serif;font-style:italic;font-size:22px;line-height:1.5;color:rgba(31,45,61,.65)">So here's the honest version, from the beginning.</p>
+    <p style="margin:0;font-size:23px;line-height:1.62">I started as an actor. Trained at a conservatory in New York. Then a professor told my entire class we weren't going to make it. I locked myself in a bathroom stall and believed him for a while.</p>
+    <p style="margin:0">But I didn't leave storytelling. I doubled down. Studied production. Took every job that kept me close to the craft. PA, unpaid intern more times than I'd like to admit, and yes, a certified master electrician wiring stage lights nobody would ever notice unless they failed. Zero glamour. All the education.</p>
+    <p style="margin:0">Eventually I found producing. First in traditional media, then almost by accident into podcasts and YouTube, where I spent four years running weekly shows for a production network and learned what it actually takes to hold a show and the people making it.</p>
+    <p style="margin:0">Along the way I made myself a promise: I will never be the person who makes someone feel small in a room I'm running.</p>
+  </section>
+
+  <div aria-hidden="true" style="height:8px;background:linear-gradient(90deg,rgba(220,91,46,0) 0%,#DC5B2E 18%,#F0B429 50%,#DC5B2E 82%,rgba(220,91,46,0) 100%);background-size:220% 100%;animation:wojshift 11s ease-in-out infinite"></div>
+
+  <section data-reveal="" style="opacity:0;transform:translateY(24px);position:relative;overflow:hidden;background:#1F2D3D;color:#FDF7EE;padding:88px 48px 92px">
+    <div style="position:absolute;bottom:0;left:50%;width:min(1100px,110%);height:620px;transform:translateX(-50%);background:radial-gradient(circle 460px at 50% 100%,rgba(240,180,41,.2) 0%,rgba(220,91,46,.09) 44%,rgba(31,45,61,0) 78%);transform-origin:50% 100%;animation:wojhaloC 18s ease-in-out infinite;pointer-events:none"></div>
+    <div style="position:relative;max-width:880px;margin:0 auto;display:flex;flex-direction:column;gap:26px">
+      <div style="height:3px;width:44px;background:linear-gradient(100deg,#DC5B2E,#F0B429,#DC5B2E);background-size:240% 100%;animation:wojshift 8s ease-in-out infinite"></div>
+      <blockquote style="margin:0;font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(28px,3.8vw,52px);line-height:1.14;letter-spacing:-.02em;text-wrap:pretty">Story is what I care about <span style="color:#F0B429;font-style:italic">most</span>. Everything else, the format, the systems, the packaging, the strategy, is just how I protect it.</blockquote>
+      <div style="font-size:17px;font-weight:300;line-height:1.6;color:rgba(253,247,238,.7)">That's the kind of producer I try to be.</div>
+    </div>
+  </section>
+
+  <div aria-hidden="true" style="height:8px;background:linear-gradient(90deg,rgba(220,91,46,0) 0%,#DC5B2E 18%,#F0B429 50%,#DC5B2E 82%,rgba(220,91,46,0) 100%);background-size:220% 100%;animation:wojshift 11s ease-in-out infinite"></div>
+
+  <section data-m-photos="" style="padding:76px 48px;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px">
+    <figure data-reveal="" style="opacity:0;transform:translateY(24px);margin:0;display:flex;flex-direction:column;gap:14px">
+      <div data-photo="" style="position:relative;width:100%;aspect-ratio:4/5;background:#F3EADD;overflow:hidden;transition:transform .6s cubic-bezier(.2,.75,.2,1), box-shadow .6s">
+        <image-slot id="woj-about-electrician-v2" shape="rect" src="assets/bruna-stage.jpeg" placeholder="Master electrician, on the rig"></image-slot>
+      </div>
+      <figcaption style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:rgba(31,45,61,.55)">MASTER ELECTRICIAN</figcaption>
+    </figure>
+    <figure data-reveal="" style="opacity:0;transform:translateY(24px);margin:0;display:flex;flex-direction:column;gap:14px">
+      <div data-photo="" style="position:relative;width:100%;aspect-ratio:4/5;background:#F3EADD;overflow:hidden;transition:transform .6s cubic-bezier(.2,.75,.2,1), box-shadow .6s">
+        <image-slot id="woj-about-electrician" shape="rect" src="assets/bruna-onset.jpeg" placeholder="On set, camera"></image-slot>
+      </div>
+      <figcaption style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:rgba(31,45,61,.55)">ON SET</figcaption>
+    </figure>
+    <figure data-reveal="" style="opacity:0;transform:translateY(24px);margin:0;display:flex;flex-direction:column;gap:14px">
+      <div data-photo="" style="position:relative;width:100%;aspect-ratio:4/5;background:#F3EADD;overflow:hidden;transition:transform .6s cubic-bezier(.2,.75,.2,1), box-shadow .6s">
+        <image-slot id="woj-about-hero" shape="rect" src="assets/bruna-onscreen.jpeg" placeholder="In the monitor, producing"></image-slot>
+      </div>
+      <figcaption style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:rgba(31,45,61,.55)">ON SCREEN</figcaption>
+    </figure>
+    <figure data-reveal="" style="opacity:0;transform:translateY(24px);margin:0;display:flex;flex-direction:column;gap:14px">
+      <div data-photo="" style="position:relative;width:100%;aspect-ratio:4/5;background:#F3EADD;overflow:hidden;transition:transform .6s cubic-bezier(.2,.75,.2,1), box-shadow .6s">
+        <image-slot id="woj-about-producer-v2" shape="rect" src="assets/bruna-producer.png" placeholder="On location, producing"></image-slot>
+      </div>
+      <figcaption style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:rgba(31,45,61,.55)">PRODUCER</figcaption>
+    </figure>
+  </section>
+
+  <section style="padding:0 48px;max-width:860px;margin:0 auto">
+    <h2 data-reveal="" style="opacity:0;transform:translateY(24px);font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(30px,3.2vw,46px);line-height:1.12;margin:0 0 36px;border-top:1px solid rgba(31,45,61,.18);padding-top:46px">Why any of this <span style="color:#DC5B2E;font-style:italic">matters.</span></h2>
+    <div data-reveal="" style="opacity:0;transform:translateY(24px);display:flex;flex-direction:column;gap:28px;font-size:19px;font-weight:300;line-height:1.8;color:rgba(31,45,61,.88);text-wrap:pretty">
+      <p style="margin:0">I've been the actor crying in the bathroom. The crew member nobody looks at twice. The talent trusting strangers to make me look good on camera. The producer holding the whole thing together in the background.</p>
+      <p style="margin:0">I came up through a few different seats, and that range shapes how I lead a room, how I talk to talent, how I show up for a crew. It's a difference you feel more than you see.</p>
+      <p style="margin:0">The other thing that shapes me is where I came from. I trained inside traditional media before I ever touched the creator economy. Which means I bring a discipline for editorial rigor, format development, and operational systems that most creator-native producers are still figuring out. I hold the editorial and the operational at the same time. Most producers pick one. My whole practice is built on doing both.</p>
+      <p style="margin:0">Underneath all of it, I'm obsessed with stories. The way a well-told one can quietly shift how someone sees themselves, or their neighbor, or the world.</p>
+      <p style="margin:0;font-family:'Playfair Display',serif;font-size:29px;line-height:1.45;color:#1F2D3D">If that sounds like the kind of producer you want in your room, come find me.</p>
+    </div>
+  </section>
+
+  <section style="padding:76px 48px 0;max-width:860px;margin:0 auto">
+    <div data-reveal="" style="opacity:0;transform:translateY(24px);border-top:1px solid rgba(31,45,61,.18);padding-top:44px">
+      <div style="font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:#DC5B2E;margin-bottom:26px">Hear me talk about it</div>
+      <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:22px">
+        <a href="https://www.youtube.com/watch?v=kws6OUBJinc" target="_blank" style="position:relative;display:block;width:100%;aspect-ratio:16/9;background:#1F2D3D;overflow:hidden">
+          <img src="https://i.ytimg.com/vi/kws6OUBJinc/maxresdefault.jpg" alt="Podcast interview" style="width:100%;height:100%;object-fit:cover;display:block">
+          <span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">
+            <span style="display:flex;align-items:center;gap:12px;background:linear-gradient(100deg,#DC5B2E 0%,#F0B429 50%,#DC5B2E 100%);background-size:220% 100%;animation:wojshift 9s ease-in-out infinite;color:#1F2D3D;padding:15px 26px;font-size:12px;letter-spacing:.2em;text-transform:uppercase">Watch the interview</span>
+          </span>
+        </a>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:'Playfair Display',serif;font-size:23px;line-height:1.35">On traditional media, new media, and what actually holds a show together.</div>
+          <div style="font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:rgba(31,45,61,.55)">Podcast interview</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:88px 48px 96px;max-width:860px;margin:0 auto">
+    <div data-reveal="" style="opacity:0;transform:translateY(24px);font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:#DC5B2E;border-top:1px solid rgba(31,45,61,.18);padding-top:46px;margin-bottom:8px">How I work</div>
+    <div style="display:flex;flex-direction:column">
+      <div data-phil="" data-reveal="" style="opacity:0;transform:translateY(24px);display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:32px;padding:28px 0;transition:padding-left .5s cubic-bezier(.2,.75,.2,1);border-bottom:1px solid rgba(31,45,61,.14)">
+        <div style="font-family:'Playfair Display',serif;font-size:24px;line-height:1.3">People over product</div>
+        <div style="font-size:17px;font-weight:300;line-height:1.7;color:rgba(31,45,61,.78)">A show is made by people. How they are treated shows up in the work.</div>
+      </div>
+      <div data-phil="" data-reveal="" style="opacity:0;transform:translateY(24px);display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:32px;padding:28px 0;transition:padding-left .5s cubic-bezier(.2,.75,.2,1);border-bottom:1px solid rgba(31,45,61,.14)">
+        <div style="font-family:'Playfair Display',serif;font-size:24px;line-height:1.3">Honest communication</div>
+        <div style="font-size:17px;font-weight:300;line-height:1.7;color:rgba(31,45,61,.78)">You will always know where the show stands, including when it is behind.</div>
+      </div>
+      <div data-phil="" data-reveal="" style="opacity:0;transform:translateY(24px);display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:32px;padding:28px 0;transition:padding-left .5s cubic-bezier(.2,.75,.2,1);border-bottom:1px solid rgba(31,45,61,.14)">
+        <div style="font-family:'Playfair Display',serif;font-size:24px;line-height:1.3">Pushing back when necessary</div>
+        <div style="font-size:17px;font-weight:300;line-height:1.7;color:rgba(31,45,61,.78)">If something is not working, I will say so early, and bring an option with me.</div>
+      </div>
+      <div data-phil="" data-reveal="" style="opacity:0;transform:translateY(24px);display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:32px;padding:28px 0;transition:padding-left .5s cubic-bezier(.2,.75,.2,1)">
+        <div style="font-family:'Playfair Display',serif;font-size:24px;line-height:1.3">Faith grounds everything</div>
+        <div style="font-size:17px;font-weight:300;line-height:1.7;color:rgba(31,45,61,.78)">It is why I can walk toward the unknown, and why I keep my word once I do.</div>
+      </div>
+    </div>
+  </section>
+
+  <div aria-hidden="true" style="height:8px;background:linear-gradient(90deg,rgba(220,91,46,0) 0%,#DC5B2E 18%,#F0B429 50%,#DC5B2E 82%,rgba(220,91,46,0) 100%);background-size:220% 100%;animation:wojshift 11s ease-in-out infinite"></div>
+
+  <section data-reveal="" style="opacity:0;transform:translateY(24px);position:relative;overflow:hidden;background:#1F2D3D;color:#FDF7EE;padding:104px 48px 118px;display:flex;flex-direction:column;align-items:center;gap:28px;text-align:center">
+    <div style="position:absolute;bottom:-46%;left:50%;width:min(1100px,140%);height:680px;transform:translateX(-50%);background:radial-gradient(circle 500px at 50% 100%,rgba(240,180,41,.5) 0%,rgba(220,91,46,.24) 42%,rgba(31,45,61,0) 78%);transform-origin:50% 100%;animation:wojhaloC 18s ease-in-out infinite;pointer-events:none"></div>
+    <svg width="76" height="46" viewBox="0 0 100 60" fill="none" style="position:relative">
+      <defs><linearGradient id="abtCtaSun" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#DC5B2E"></stop><stop offset="100%" stop-color="#F0B429"></stop></linearGradient></defs>
+      <path d="M31 43 A19 19 0 0 1 69 43 Z" fill="url(#abtCtaSun)"></path>
+      <line x1="2" y1="43" x2="98" y2="43" stroke="#FDF7EE" stroke-width="2.6"></line>
+    </svg>
+    <div style="position:relative;font-family:'Playfair Display',serif;font-size:clamp(28px,3.4vw,46px);line-height:1.2;max-width:800px">That's my story. <span style="color:#F0B429;font-style:italic">Now tell me about yours.</span></div>
+    <a href="contact.html" style="position:relative;display:inline-flex;align-items:center;gap:14px;background:linear-gradient(100deg,#DC5B2E 0%,#F0B429 50%,#DC5B2E 100%);background-size:220% 100%;animation:wojshift 9s ease-in-out infinite;color:#1F2D3D;padding:19px 34px;transition:transform .3s,box-shadow .3s;font-size:13px;letter-spacing:.2em;text-transform:uppercase;position:relative;overflow:hidden;transition:transform .4s cubic-bezier(.2,.75,.2,1),box-shadow .4s,background .4s,color .4s" data-cta="" style-hover="background:#FDF7EE;color:#1F2D3D">Your turn</a>
+  </section>
+
+  <div aria-hidden="true" style="height:8px;background:linear-gradient(90deg,rgba(220,91,46,0) 0%,#DC5B2E 18%,#F0B429 50%,#DC5B2E 82%,rgba(220,91,46,0) 100%);background-size:220% 100%;animation:wojshift 11s ease-in-out infinite"></div>
+
+  <div style="height:6px;background:linear-gradient(100deg,#DC5B2E 0%,#F0B429 50%,#DC5B2E 100%);background-size:220% 100%;animation:wojshift 11s ease-in-out infinite"></div>
+
+  <footer style="background:#FDF7EE;color:#1F2D3D;padding:22px 48px;border-top:1px solid rgba(31,45,61,.12)">
+    <div style="max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:40px">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+          <svg width="74" height="45" viewBox="0 0 100 60" fill="none" style="flex:none">
+            <defs><linearGradient id="navSunAbtFoot" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#DC5B2E"></stop><stop offset="100%" stop-color="#F0B429"></stop></linearGradient></defs>
+            <path d="M31 43 A19 19 0 0 1 69 43 Z" fill="url(#navSunAbtFoot)"></path>
+            <line x1="2" y1="43" x2="98" y2="43" stroke="#1F2D3D" stroke-width="3.4"></line>
+          </svg>
+          <span style="display:flex;flex-direction:column;align-items:center;gap:4px">
+            <span style="font-family:'Playfair Display',serif;font-size:24px;line-height:1;white-space:nowrap">West of June</span>
+            <span style="font-size:10px;letter-spacing:.44em;text-transform:uppercase;color:#DC5B2E;padding-left:.44em">Media</span>
+          </span>
+        </div>
+        <span style="font-family:'Playfair Display',serif;font-style:italic;font-size:13px;color:rgba(31,45,61,.55)">Matthew 6:33</span>
+      </div>
+      <div style="display:flex;gap:30px;font-size:11px;letter-spacing:.18em;text-transform:uppercase">
+        <a href="https://linkedin.com/in/brunavil" target="_blank" style="color:rgba(31,45,61,.7)" style-hover="color:#DC5B2E">LinkedIn</a>
+        <a href="mailto:bruna@westofjunemedia.com" style="color:rgba(31,45,61,.7)" style-hover="color:#DC5B2E">Email</a>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const show = el => { el.style.opacity = 1; el.style.transform = 'translateY(0)'; el.style.filter = 'none'; };
+    setTimeout(() => {
+      const els = document.querySelectorAll('[data-reveal]');
+      els.forEach(el => { el.style.transition = 'opacity 1.05s cubic-bezier(.2,.75,.2,1), transform 1.05s cubic-bezier(.2,.75,.2,1), filter 1.05s ease'; el.style.filter = 'blur(6px)'; });
+      const io = new IntersectionObserver(entries => {
+        entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => show(e.target), i * 70); io.unobserve(e.target); } });
+      }, { threshold: 0.02, rootMargin: '0px 0px -2% 0px' });
+      els.forEach(el => io.observe(el));
+      this._io = io;
+      setTimeout(() => els.forEach(show), 700);
+      document.querySelectorAll('[data-cta]').forEach(btn => {
+        if (btn.dataset.ctaWired) return;
+        btn.dataset.ctaWired = '1';
+        const label = btn.textContent.trim();
+        btn.textContent = '';
+        const txt = document.createElement('span');
+        txt.textContent = label;
+        txt.style.cssText = 'position:relative;display:inline-block;transition:transform .45s cubic-bezier(.2,.75,.2,1)';
+        const arrow = document.createElement('span');
+        arrow.textContent = '\u2192';
+        arrow.style.cssText = 'position:relative;display:inline-block;margin-left:0;max-width:0;opacity:0;overflow:hidden;transform:translateX(-6px);transition:max-width .45s cubic-bezier(.2,.75,.2,1),opacity .35s ease,margin-left .45s,transform .45s cubic-bezier(.2,.75,.2,1)';
+        btn.appendChild(txt); btn.appendChild(arrow);
+        btn.addEventListener('mouseenter', () => {
+          btn.style.transform = 'translateY(-3px)';
+          btn.style.boxShadow = '0 14px 34px rgba(220,91,46,.32)';
+          arrow.style.maxWidth = '2em'; arrow.style.opacity = '1';
+          arrow.style.marginLeft = '12px'; arrow.style.transform = 'translateX(0)';
+        });
+        btn.addEventListener('mouseleave', () => {
+          btn.style.transform = 'translateY(0)';
+          btn.style.boxShadow = 'none';
+          arrow.style.maxWidth = '0'; arrow.style.opacity = '0';
+          arrow.style.marginLeft = '0'; arrow.style.transform = 'translateX(-6px)';
+        });
+      });
+
+      document.querySelectorAll('figure').forEach(fig => {
+        const frame = fig.querySelector('[data-photo]');
+        const cap = fig.querySelector('figcaption');
+        if (cap) cap.style.transition = 'color .45s';
+        fig.addEventListener('mouseenter', () => {
+          if (frame) { frame.style.transform = 'translateY(-8px)'; frame.style.boxShadow = '0 24px 50px rgba(31,45,61,.22)'; }
+          if (cap) cap.style.color = '#DC5B2E';
+        });
+        fig.addEventListener('mouseleave', () => {
+          if (frame) { frame.style.transform = 'translateY(0)'; frame.style.boxShadow = 'none'; }
+          if (cap) cap.style.color = 'rgba(31,45,61,.55)';
+        });
+      });
+
+      document.querySelectorAll('[data-phil]').forEach(row => {
+        const title = row.firstElementChild;
+        if (title) title.style.transition = 'color .45s';
+        row.style.transition = (row.style.transition ? row.style.transition + ', ' : '') + 'padding-left .5s cubic-bezier(.2,.75,.2,1)';
+        row.addEventListener('mouseenter', () => { row.style.paddingLeft = '18px'; if (title) title.style.color = '#DC5B2E'; });
+        row.addEventListener('mouseleave', () => { row.style.paddingLeft = '0px'; if (title) title.style.color = '#1F2D3D'; });
+      });
+    }, 30);
+  }
+  componentWillUnmount() { if (this._io) this._io.disconnect(); }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
