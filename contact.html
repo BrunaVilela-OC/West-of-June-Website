@@ -84,6 +84,7 @@
     [data-cta] { font-size: 12px !important; letter-spacing: .1em !important; padding-left: 18px !important; padding-right: 18px !important; }
   }
 </style>
+<script src="journey.js"></script>
 </helmet>
 <div style="font-family:Jost,system-ui,sans-serif;background:#FDF7EE;color:#1F2D3D;min-height:100vh;display:flex;flex-direction:column">
 
@@ -164,7 +165,7 @@
             <span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(31,45,61,.5)">So, what are you making?</span>
             <textarea value="{{ note }}" onChange="{{ onNote }}" rows="4" placeholder="Where the adventure starts. An idea, a show already running, a channel you want to grow. Tell me where it's at and what you need." style="background:transparent;border:0;border-bottom:1px solid rgba(31,45,61,.28);color:#1F2D3D;font-family:Jost,sans-serif;font-size:17px;font-weight:300;padding:10px 0;outline:none;resize:vertical"></textarea>
           </label>
-          <button onClick="{{ send }}" style="align-self:flex-start;background:linear-gradient(100deg,#DC5B2E 0%,#F0B429 100%);color:#1F2D3D;border:0;font-family:Jost,sans-serif;font-size:13px;letter-spacing:.2em;text-transform:uppercase;padding:19px 34px;cursor:pointer;position:relative;transition:transform .4s cubic-bezier(.2,.75,.2,1),box-shadow .4s;background-size:220% 100%;animation:wojshift 9s ease-in-out infinite" style-hover="transform:translateY(-3px);box-shadow:0 14px 34px rgba(220,91,46,.32)">Send it over →</button>
+          <button data-cta="" onClick="{{ send }}" style="align-self:flex-start;background:linear-gradient(100deg,#DC5B2E 0%,#F0B429 100%);color:#1F2D3D;border:0;font-family:Jost,sans-serif;font-size:13px;letter-spacing:.2em;text-transform:uppercase;padding:19px 34px;cursor:pointer;position:relative;transition:transform .4s cubic-bezier(.2,.75,.2,1),box-shadow .4s;background-size:220% 100%;animation:wojshift 9s ease-in-out infinite" style-hover="background:#1F2D3D;color:#FDF7EE;transform:translateY(-3px);box-shadow:0 14px 34px rgba(31,45,61,.3)">Send it over →</button>
         </div>
       </sc-if>
     </div>
@@ -213,6 +214,19 @@ class Component extends DCLogic {
         row.style.transition = 'padding-left .45s cubic-bezier(.2,.75,.2,1), border-color .45s';
         row.addEventListener('mouseenter', () => { row.style.paddingLeft = '14px'; row.style.borderTopColor = '#DC5B2E'; });
         row.addEventListener('mouseleave', () => { row.style.paddingLeft = '0px'; row.style.borderTopColor = 'rgba(31,45,61,.18)'; });
+      });
+
+      document.querySelectorAll('[data-stage]').forEach(chip => {
+        chip.addEventListener('mouseenter', () => {
+          if (chip.style.background === 'rgb(31, 45, 61)' || chip.style.background.indexOf('#1F2D3D') >= 0) return;
+          chip.dataset.rest = chip.getAttribute('style');
+          chip.style.background = '#1F2D3D';
+          chip.style.color = '#F0B429';
+          chip.style.borderColor = '#1F2D3D';
+        });
+        chip.addEventListener('mouseleave', () => {
+          if (chip.dataset.rest) chip.setAttribute('style', chip.dataset.rest);
+        });
       });
 
       document.querySelectorAll('input, textarea').forEach(f => {
