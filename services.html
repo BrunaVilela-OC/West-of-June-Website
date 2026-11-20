@@ -1,27 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+<title>What I Do | West of June Media</title>
+<meta name="description" content="Story and format development, showrunning, and hands-on production. The three ways Bruna Vilela works with media companies, creators and teams.">
+<meta name="author" content="Bruna Vilela">
+<link rel="canonical" href="https://westofjunemedia.com/services.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="West of June Media">
+<meta property="og:title" content="What I Do | West of June Media">
+<meta property="og:description" content="Story and format development, showrunning, and hands-on production. The three ways Bruna Vilela works with media companies, creators and teams.">
+<meta property="og:url" content="https://westofjunemedia.com/services.html">
+<meta property="og:image" content="https://westofjunemedia.com/assets/bruna-headshot.jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&amp;family=Jost:wght@300;400;500&amp;family=Caveat:wght@400;500&amp;display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; }
-  body { margin: 0; background: #FDF7EE; color: #1F2D3D; }
   @keyframes wojsunC { 0%,100% { opacity: .82; transform: translateX(-50%) translateY(8px) scale(.97); } 50% { opacity: 1; transform: translateX(-50%) translateY(0) scale(1.03); } }
   @keyframes wojsunR { 0%,100% { opacity: .82; transform: translateY(8px) scale(.97); } 50% { opacity: 1; transform: translateY(0) scale(1.03); } }
   @keyframes wojhaloC { 0%,100% { opacity: .6; transform: translateX(-50%) scale(.94); } 50% { opacity: 1; transform: translateX(-50%) scale(1.06); } }
   @keyframes wojhaloR { 0%,100% { opacity: .6; transform: scale(.94); } 50% { opacity: 1; transform: scale(1.06); } }
   @keyframes wojshift { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
-  @keyframes wojpulse { 0%,100% { opacity: .85; } 50% { opacity: 1; } }
-  a { color: #DC5B2E; text-decoration: none; }
-  a:hover { color: #1F2D3D; }
+  body { margin: 0; background: #1F2D3D; color: #FDF7EE; }
+  a { color: #F0B429; text-decoration: none; }
+  a:hover { color: #FDF7EE; }
 
+  @media (hover: none) {
+    [data-svc-row], [data-row] { background: transparent !important; box-shadow: none !important; padding-left: 0 !important; padding-right: 0 !important; }
+  }
   @media (max-width: 900px) {
     html, body { overflow-x: hidden; }
     nav { padding: 0 20px !important; }
@@ -31,7 +41,7 @@
     [style*="grid-template-columns"] { grid-template-columns: minmax(0,1fr) !important; }
     [data-m-photos] { grid-template-columns: repeat(2,minmax(0,1fr)) !important; }
     h1 [style*="nowrap"], h2 [style*="nowrap"] { white-space: normal !important; }
-    img, svg, iframe, image-slot { max-width: 100%; }
+    img, svg, iframe { max-width: 100%; }
     footer > div, [data-home-footer] { flex-wrap: wrap !important; row-gap: 24px !important; }
     [style*="text-align: right"] { text-align: left !important; }
     [style*="gap: 88px"], [style*="gap: 80px"], [style*="gap: 72px"], [style*="gap: 64px"], [style*="gap: 56px"], [style*="gap: 48px"], [style*="gap: 44px"] { gap: 34px !important; }
@@ -48,7 +58,7 @@
     /* nav becomes two rows: lockup centred, then full-width menu at readable size */
     nav { position: static !important; padding: 0 !important; }
     [data-nav-inner] { flex-direction: column !important; flex-wrap: nowrap !important; align-items: stretch !important; gap: 0 !important; padding: 0 !important; }
-    [data-nav-logo] { gap: 6px !important; padding: 16px 18px 14px !important; }
+    [data-nav-logo] { gap: 11px !important; padding: 16px 18px 14px !important; justify-content: center !important; }
     [data-nav-logo] > svg { width: 58px !important; height: 35px !important; }
     [data-nav-logo] span span:first-child { font-size: 21px !important; }
     [data-nav-logo] span span:last-child { font-size: 9px !important; letter-spacing: .38em !important; }
@@ -80,27 +90,72 @@
     [data-nav-links] > a { padding: 0 2px !important; }
     [data-cta] { font-size: 12px !important; letter-spacing: .1em !important; padding-left: 18px !important; padding-right: 18px !important; }
   }
+
+
+  /* ===================== what i do ===================== */
+  [data-wid] { --ink: #1F2D3D; --ink-soft: rgba(31,45,61,.84); --ink-mute: rgba(31,45,61,.66);
+    --rule: rgba(31,45,61,.18); --accent: #C2522A; --accent2: #8A6209; }
+  [data-hand] { font-family: Caveat, 'Segoe Script', cursive; color: var(--accent); }
+
+  [data-wid-h1] { font-family: 'Playfair Display', serif; font-weight: 500; font-size: clamp(40px,5.2vw,72px);
+    line-height: 1.06; letter-spacing: -.022em; margin: 0 0 26px; color: var(--ink); max-width: 17ch; text-wrap: balance; }
+  [data-wid-h1] [data-hand] { font-size: clamp(44px,5.8vw,80px); line-height: .8; white-space: nowrap; }
+  [data-wid-sub] { max-width: 620px; font-size: 19px; font-weight: 400; line-height: 1.72;
+    color: var(--ink-soft); margin: 0; text-wrap: pretty; }
+
+  /* the three capabilities, strung on one thread rather than boxed in cards */
+  [data-caps] { position: relative; max-width: 1060px; }
+  [data-caps]::before { content: ""; position: absolute; left: 33px; top: 54px; bottom: 76px; width: 2px;
+    background: linear-gradient(180deg,#DC5B2E 0%,#F0B429 55%,rgba(240,180,41,0) 100%); }
+  [data-cap] { position: relative; display: grid; grid-template-columns: 110px minmax(0,1fr);
+    gap: 0 34px; align-items: start; padding: 40px 0 44px; border-top: 1px solid var(--rule); }
+  [data-cap]:first-child { border-top: 0; padding-top: 10px; }
+  [data-cap-num] { position: relative; z-index: 1; font-family: 'Playfair Display', serif; font-weight: 600;
+    font-size: 38px; line-height: 1; color: var(--accent); background: #FDF7EE; padding: 6px 0 10px; }
+  [data-cap-name] { margin: 0 0 14px; font-family: 'Playfair Display', serif; font-weight: 500;
+    font-size: clamp(25px,2.8vw,34px); line-height: 1.12; letter-spacing: -.02em; color: var(--ink); }
+  [data-cap-line] { display: block; font-family: 'Playfair Display', serif; font-style: italic;
+    font-weight: 400; font-size: clamp(19px,2vw,24px); line-height: 1.38; color: var(--accent);
+    margin-bottom: 14px; max-width: 32ch; text-wrap: pretty; }
+  [data-cap-detail] { margin: 0; font-size: 17px; font-weight: 400; line-height: 1.75;
+    color: var(--ink-soft); max-width: 62ch; text-wrap: pretty; }
+
+  /* audience: a margin note, deliberately quieter than the three above */
+  [data-aud] { margin: 8px 0 0 110px; max-width: 760px; background: #F2EADA;
+    border-left: 2px solid var(--accent2); padding: 26px 30px 28px; display: flex; gap: 18px; }
+  [data-aud] svg { flex: none; margin-top: 4px; color: var(--accent2); }
+  [data-aud-head] { margin: 0 0 10px; font-family: 'Playfair Display', serif; font-style: italic;
+    font-weight: 500; font-size: clamp(20px,2.1vw,25px); line-height: 1.25; color: var(--ink); }
+  [data-aud] p { margin: 0; font-size: 16px; font-weight: 400; line-height: 1.7; color: var(--ink-soft); }
+
+  @media (max-width: 900px) {
+    [data-caps]::before { left: 15px; }
+    [data-cap] { grid-template-columns: minmax(0,1fr); gap: 0; padding-left: 44px; }
+    [data-cap-num] { font-size: 30px; padding: 0 0 8px; margin-left: -44px; width: 44px; }
+    [data-aud] { margin-left: 0; flex-direction: column; gap: 12px; padding: 22px 20px 24px; }
+    [data-wid-h1] { max-width: none; }
+  }
 </style>
-<script src="journey.js"></script>
-</helmet>
-<div style="font-family:Jost,system-ui,sans-serif;background:#FDF7EE;color:#1F2D3D">
+</head>
+<body>
+<div data-wid="" style="font-family:Jost,system-ui,sans-serif;background:#FDF7EE;color:#1F2D3D;min-height:100vh">
 
   <nav style="position:sticky;top:0;z-index:40;padding:0 48px;background:rgba(253,247,238,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(31,45,61,.1)">
     <div data-nav-inner="" style="max-width:1180px;margin:0 auto;padding:20px 0;display:flex;align-items:center;justify-content:space-between">
-    <a data-nav-logo="" href="/" style="display:flex;flex-direction:column;align-items:center;gap:8px;color:#1F2D3D">
+    <a data-nav-logo="" href="index.html" style="display:flex;flex-direction:row;align-items:center;gap:15px;color:#1F2D3D">
       <svg width="74" height="45" viewBox="0 0 100 60" fill="none" style="flex:none">
         <defs><linearGradient id="navSunSvc" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#DC5B2E"></stop><stop offset="100%" stop-color="#F0B429"></stop></linearGradient></defs>
         <path d="M31 43 A19 19 0 0 1 69 43 Z" fill="url(#navSunSvc)"></path>
         <line x1="2" y1="43" x2="98" y2="43" stroke="#1F2D3D" stroke-width="3.4"></line>
       </svg>
-      <span style="display:flex;flex-direction:column;align-items:center;gap:4px">
+      <span style="display:flex;flex-direction:column;align-items:flex-start;gap:4px">
         <span style="font-family:'Playfair Display',serif;font-size:24px;line-height:1;white-space:nowrap">West of June</span>
-        <span style="font-size:10px;letter-spacing:.44em;text-transform:uppercase;color:#DC5B2E;padding-left:.44em">Media</span>
+        <span style="font-size:10px;letter-spacing:.44em;text-transform:uppercase;color:#DC5B2E">Media</span>
       </span>
     </a>
     <div data-nav-links="" style="display:flex;align-items:center;gap:34px;font-size:13px;letter-spacing:.16em;text-transform:uppercase">
-      <a href="work.html" style="color:#1F2D3D" style-hover="color:#DC5B2E">My Work</a>
-      <a href="services.html" style="color:#DC5B2E">How I Help</a>
+      <a href="services.html" style="color:#DC5B2E">What I Do</a>
+      <a href="work.html" style="color:#1F2D3D" style-hover="color:#DC5B2E">Portfolio</a>
       <a href="about.html" style="color:#1F2D3D" style-hover="color:#DC5B2E">My Story</a>
       <a href="contact.html" style="color:#1F2D3D;padding:10px 20px;border:1px solid rgba(31,45,61,.35)" style-hover="background:#1F2D3D;color:#FDF7EE">Let’s Talk</a>
     </div>
@@ -109,241 +164,110 @@
 
   <div style="height:6px;background:linear-gradient(100deg,#DC5B2E 0%,#F0B429 50%,#DC5B2E 100%);background-size:220% 100%;animation:wojshift 11s ease-in-out infinite"></div>
 
-  <header style="padding:88px 48px 64px;max-width:1180px;margin:0 auto">
-    <div data-reveal="" style="opacity:0;transform:translateY(24px);font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:#DC5B2E;margin-bottom:24px">Services, three ways in</div>
-    <h1 data-reveal="" style="opacity:0;transform:translateY(24px);font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(42px,5.2vw,72px);line-height:1.05;letter-spacing:-.015em;margin:0 0 26px">Big idea, existing show, one ambitious project. <span style="color:#DC5B2E;font-style:italic">There’s a way in.</span></h1>
-    <p data-reveal="" style="opacity:0;transform:translateY(24px);max-width:640px;font-size:19px;font-weight:300;line-height:1.75;color:rgba(31,45,61,.8);margin:0;text-wrap:pretty">Three ways to bring me into what you’re building, whether that’s a production already running or an ambitious idea you need help making real. Pick the one that matches where you are, and if none of them quite fit, tell me what you’re building and we’ll shape it together.</p>
+  <header style="padding:88px 48px 58px">
+    <div style="max-width:1180px;margin:0 auto">
+      <div data-reveal="" style="opacity:0;transform:translateY(24px);display:flex;align-items:center;gap:14px;margin-bottom:26px">
+        <span aria-hidden="true" style="display:block;width:34px;height:1px;background:#C2522A"></span>
+        <span style="font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:#C2522A">What I Do</span>
+      </div>
+      <h1 data-wid-h1="" data-reveal="" style="opacity:0;transform:translateY(24px)">From the first <span data-hand="">“what if”</span> to the final upload.</h1>
+      <p data-wid-sub="" data-reveal="" style="opacity:0;transform:translateY(24px)">I work across creative development, production, and editorial, helping turn ambitious ideas into stories that actually make it into the world.</p>
+    </div>
   </header>
 
-  <section style="padding:0 48px;max-width:1180px;margin:0 auto">
-    <div data-reveal="" style="opacity:0;transform:translateY(24px);display:flex;align-items:center;gap:16px;margin-bottom:8px">
-      <span style="height:3px;width:44px;background:linear-gradient(100deg,#DC5B2E,#F0B429,#DC5B2E);background-size:240% 100%;animation:wojshift 8s ease-in-out infinite"></span>
-      <span style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:rgba(31,45,61,.5)">Three ways in</span>
-      <span style="flex:1;height:1px;background:rgba(31,45,61,.15)"></span>
-      <span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(31,45,61,.5)">Contact for details</span>
-    </div>
-    <div data-svc-row="1" data-reveal="" style="opacity:0;transform:translateY(24px);position:relative;display:grid;grid-template-columns:88px minmax(0,.8fr) minmax(0,1.2fr);gap:40px;align-items:start;border-top:1px solid rgba(31,45,61,.2);padding:46px 0 48px;overflow:hidden">
-      <div data-svc-bar="" style="position:absolute;left:0;top:0;width:0;height:3px;background:linear-gradient(100deg,#DC5B2E,#F0B429);transition:width .8s cubic-bezier(.2,.75,.2,1)"></div>
-      <div data-svc-num="" style="font-family:'Playfair Display',serif;font-size:clamp(48px,6vw,76px);line-height:1.05;padding-bottom:2px;background:linear-gradient(160deg,#DC5B2E 0%,#F0B429 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;opacity:.3;transition:opacity .5s">01</div>
-      <div style="display:flex;flex-direction:column;gap:12px">
-        <div data-svc-name="" style="font-family:'Playfair Display',serif;font-size:clamp(28px,3.2vw,38px);line-height:1.1;letter-spacing:-.015em;transition:color .5s">Showrunner</div>
-        <div style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#DC5B2E">Ongoing retainer · Weekly or biweekly</div>
+  <section style="padding:30px 48px 20px">
+    <div data-caps="" style="margin:0 auto">
+
+      <div data-cap="" data-reveal="" style="opacity:0;transform:translateY(24px)">
+        <span data-cap-num="">01</span>
+        <div>
+          <h2 data-cap-name="">Creative &amp; Story Development</h2>
+          <span data-cap-line="">Finding the story worth telling and figuring out how to tell it.</span>
+          <p data-cap-detail="">Original concepts and formats, story research, talent discovery, interview writing, rundowns, and editorial direction.</p>
+        </div>
       </div>
-      <p style="margin:0;font-size:18px;font-weight:300;line-height:1.75;color:rgba(31,45,61,.85);text-wrap:pretty">I run the show end to end, week after week. Story and editorial calls, the team, the schedule, post and delivery. You stay on camera and in the ideas instead of being the bottleneck for every decision.</p>
-    </div>
-    <div data-svc-row="1" data-reveal="" style="opacity:0;transform:translateY(24px);position:relative;display:grid;grid-template-columns:88px minmax(0,.8fr) minmax(0,1.2fr);gap:40px;align-items:start;border-top:1px solid rgba(31,45,61,.2);padding:46px 0 48px;overflow:hidden">
-      <div data-svc-bar="" style="position:absolute;left:0;top:0;width:0;height:3px;background:linear-gradient(100deg,#DC5B2E,#F0B429);transition:width .8s cubic-bezier(.2,.75,.2,1)"></div>
-      <div data-svc-num="" style="font-family:'Playfair Display',serif;font-size:clamp(48px,6vw,76px);line-height:1.05;padding-bottom:2px;background:linear-gradient(160deg,#DC5B2E 0%,#F0B429 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;opacity:.3;transition:opacity .5s">02</div>
-      <div style="display:flex;flex-direction:column;gap:12px">
-        <div data-svc-name="" style="font-family:'Playfair Display',serif;font-size:clamp(28px,3.2vw,38px);line-height:1.1;letter-spacing:-.015em;transition:color .5s">Launch Producer</div>
-        <div style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#DC5B2E">Build from scratch</div>
+
+      <div data-cap="" data-reveal="" style="opacity:0;transform:translateY(24px)">
+        <span data-cap-num="">02</span>
+        <div>
+          <h2 data-cap-name="">Creative Production</h2>
+          <span data-cap-line="">Turning ambitious ideas into actual productions.</span>
+          <p data-cap-detail="">Pre-production, field producing, on-set editorial decisions, talent coordination, paper edits, and post-production collaboration.</p>
+        </div>
       </div>
-      <p style="margin:0;font-size:18px;font-weight:300;line-height:1.75;color:rgba(31,45,61,.85);text-wrap:pretty">From an idea to a thing that ships on a schedule. Concept and format development, editorial development, audience positioning, the team and workflow to sustain it, and the first pieces produced end to end. Enough structure to keep it running after launch.</p>
-    </div>
-        <div data-svc-row="1" data-reveal="" style="opacity:0;transform:translateY(24px);position:relative;display:grid;grid-template-columns:88px minmax(0,.8fr) minmax(0,1.2fr);gap:40px;align-items:start;border-top:1px solid rgba(31,45,61,.2);border-bottom:1px solid rgba(31,45,61,.2);padding:46px 0 48px;overflow:hidden">
-      <div data-svc-bar="" style="position:absolute;left:0;top:0;width:0;height:3px;background:linear-gradient(100deg,#DC5B2E,#F0B429);transition:width .8s cubic-bezier(.2,.75,.2,1)"></div>
-      <div data-svc-num="" style="font-family:'Playfair Display',serif;font-size:clamp(48px,6vw,76px);line-height:1.05;padding-bottom:2px;background:linear-gradient(160deg,#DC5B2E 0%,#F0B429 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;opacity:.3;transition:opacity .5s">03</div>
-      <div style="display:flex;flex-direction:column;gap:12px">
-        <div data-svc-name="" style="font-family:'Playfair Display',serif;font-size:clamp(28px,3.2vw,38px);line-height:1.1;letter-spacing:-.015em;transition:color .5s">Project Producer</div>
-        <div style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#DC5B2E">One project · Start to finish</div>
+
+      <div data-cap="" data-reveal="" style="opacity:0;transform:translateY(24px)">
+        <span data-cap-num="">03</span>
+        <div>
+          <h2 data-cap-name="">Production Leadership</h2>
+          <span data-cap-line="">Keeping the creative ambition and the practical execution moving together.</span>
+          <p data-cap-detail="">Showrunning, production workflows, team coordination, budgets, timelines, and overseeing projects from development through delivery.</p>
+        </div>
       </div>
-      <p style="margin:0;font-size:18px;font-weight:300;line-height:1.75;color:rgba(31,45,61,.85);text-wrap:pretty">Give me the concept or the story you want to make and I figure out how to actually make it. A documentary, a mini-series, a field shoot, a special YouTube video, an experiment. Depending on the project that can mean research, casting, location sourcing, story development, planning, logistics, team coordination, and post oversight.</p>
+
     </div>
   </section>
 
-  <section data-reveal="" style="opacity:0;transform:translateY(24px);padding:64px 48px 72px;max-width:1180px;margin:0 auto">
-    <p style="margin:0;font-family:'Playfair Display',serif;font-size:clamp(22px,2.5vw,32px);line-height:1.4;color:rgba(31,45,61,.85);max-width:34ch">However we work together, it draws from the same three areas. <span style="color:#DC5B2E;font-style:italic">Here’s what’s in them.</span></p>
+  <section style="padding:0 48px 86px">
+    <div style="max-width:1060px;margin:0 auto">
+      <div data-aud="" data-reveal="" style="opacity:0;transform:translateY(24px)">
+        <svg aria-hidden="true" width="26" height="26" viewBox="0 0 26 26" fill="none">
+          <path d="M13 2.4V6" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"></path>
+          <path d="M13 20V23.6" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"></path>
+          <path d="M2.4 13H6" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"></path>
+          <path d="M20 13H23.6" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"></path>
+          <path d="M5.5 5.5L8 8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" opacity=".7"></path>
+          <path d="M18 18L20.5 20.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" opacity=".7"></path>
+          <path d="M20.5 5.5L18 8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" opacity=".7"></path>
+          <path d="M8 18L5.5 20.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" opacity=".7"></path>
+          <circle cx="13" cy="13" r="4.1" stroke="currentColor" stroke-width="1.9"></circle>
+        </svg>
+        <div>
+          <h3 data-aud-head="">And yes, I think about the audience, too.</h3>
+          <p>Good storytelling and understanding the platform aren’t mutually exclusive. I use audience insights, performance data, and an understanding of YouTube packaging to inform creative decisions, without letting the algorithm write the story.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <div aria-hidden="true" style="height:8px;background:linear-gradient(90deg,rgba(220,91,46,0) 0%,#DC5B2E 18%,#F0B429 50%,#DC5B2E 82%,rgba(220,91,46,0) 100%);background-size:220% 100%;animation:wojshift 11s ease-in-out infinite"></div>
+  <section style="position:relative;overflow:hidden;background:#1F2D3D;color:#FDF7EE">
+    <div style="position:absolute;right:9%;bottom:2px;width:min(320px,32%);aspect-ratio:2/1;background:linear-gradient(180deg,#F0B429 0%,#DC5B2E 100%);border-radius:999px 999px 0 0;filter:blur(1.5px);opacity:.92;transform-origin:50% 100%;animation:wojsunR 14s ease-in-out infinite;pointer-events:none"></div>
+    <div style="position:absolute;right:-4%;bottom:2px;width:min(1100px,92%);height:620px;background:radial-gradient(circle 460px at 68% 100%,rgba(240,180,41,.34) 0%,rgba(220,91,46,.15) 42%,rgba(31,45,61,0) 78%);transform-origin:50% 100%;animation:wojhaloR 18s ease-in-out infinite;pointer-events:none"></div>
+    <div style="position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,rgba(253,247,238,0) 0%,rgba(253,247,238,.5) 28%,rgba(253,247,238,.5) 72%,rgba(253,247,238,0) 100%);z-index:2;pointer-events:none"></div>
 
-  <section style="position:relative;overflow:hidden;background:#1F2D3D;color:#FDF7EE;padding:0 48px 88px">
-    <div style="position:absolute;bottom:0;left:50%;width:min(1100px,110%);height:620px;transform:translateX(-50%);background:radial-gradient(circle 460px at 50% 100%,rgba(240,180,41,.22) 0%,rgba(220,91,46,.1) 44%,rgba(31,45,61,0) 78%);transform-origin:50% 100%;animation:wojhaloC 18s ease-in-out infinite;pointer-events:none"></div>
-    <div style="position:relative;max-width:1180px;margin:0 auto">
-      <div data-reveal="" style="opacity:0;transform:translateY(24px);padding:76px 0 52px">
-        <h2 style="font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(30px,3.4vw,46px);line-height:1.12;margin:0">What I actually <span style="color:#F0B429;font-style:italic">do.</span></h2>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px">
-        <div data-reveal="" data-pillar="" style="opacity:0;transform:translateY(24px);display:flex;flex-direction:column;gap:22px;padding-left:26px;border-left:1px solid rgba(253,247,238,.16)">
-          <div>
-            <div style="font-family:'Playfair Display',serif;font-size:27px;margin-bottom:10px">Editorial &amp; Creative</div>
-            <div style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#F0B429">Story, format, and words</div>
-          </div>
-          <div style="height:3px;width:44px;background:linear-gradient(100deg,#DC5B2E,#F0B429,#DC5B2E);background-size:240% 100%;animation:wojshift 8s ease-in-out infinite"></div>
-          <div style="display:flex;flex-direction:column;gap:11px;font-size:16px;font-weight:300;line-height:1.55;color:rgba(253,247,238,.82)">
-            <div>Format and concept development</div>
-            <div>Story development and editorial structure</div>
-            <div>Creative brief writing</div>
-            <div>Research and talent or topic development</div>
-            <div>Interview development and rundowns</div>
-            <div>Footage review and paper edit direction</div>
-            <div>Title and thumbnail development</div>
-            <div>Supporting editorial and copy</div>
-          </div>
-        </div>
-        <div data-reveal="" data-pillar="" style="opacity:0;transform:translateY(24px);display:flex;flex-direction:column;gap:22px;padding-left:26px;border-left:1px solid rgba(253,247,238,.16)">
-          <div>
-            <div style="font-family:'Playfair Display',serif;font-size:27px;margin-bottom:10px">Production &amp; Operations</div>
-            <div style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#F0B429">Scheduling, booking, delivery</div>
-          </div>
-          <div style="height:3px;width:44px;background:linear-gradient(100deg,#DC5B2E,#F0B429,#DC5B2E);background-size:240% 100%;animation:wojshift 8s ease-in-out infinite"></div>
-          <div style="display:flex;flex-direction:column;gap:11px;font-size:16px;font-weight:300;line-height:1.55;color:rgba(253,247,238,.82)">
-            <div>Project management</div>
-            <div>Production scheduling and coordination</div>
-            <div>Talent and guest outreach and booking</div>
-            <div>Vendor and location outreach</div>
-            <div>Asset tracking and delivery</div>
-            <div>Upload and distribution management</div>
-          </div>
-        </div>
-        <div data-reveal="" data-pillar="" style="opacity:0;transform:translateY(24px);display:flex;flex-direction:column;gap:22px;padding-left:26px;border-left:1px solid rgba(253,247,238,.16)">
-          <div>
-            <div style="font-family:'Playfair Display',serif;font-size:27px;margin-bottom:10px">Development &amp; Strategy</div>
-            <div style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#F0B429">Concept, positioning, feasibility</div>
-          </div>
-          <div style="height:3px;width:44px;background:linear-gradient(100deg,#DC5B2E,#F0B429,#DC5B2E);background-size:240% 100%;animation:wojshift 8s ease-in-out infinite"></div>
-          <div style="display:flex;flex-direction:column;gap:11px;font-size:16px;font-weight:300;line-height:1.55;color:rgba(253,247,238,.82)">
-            <div>Creative development sessions</div>
-            <div>Audience and format positioning</div>
-            <div>Platform and format recommendations</div>
-            <div>Packaging development</div>
-            <div>Sponsorship integration and brand fit</div>
-            <div>Production feasibility</div>
-          </div>
-        </div>
-      </div>
+    <div style="position:relative;max-width:1180px;margin:0 auto;padding:104px 48px 126px;display:flex;flex-direction:column;align-items:flex-start;gap:30px">
+      <h2 data-reveal="" style="opacity:0;transform:translateY(24px);margin:0;font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(34px,4.2vw,58px);line-height:1.06;letter-spacing:-.025em;max-width:18ch">Your <span style="color:#F0B429;font-style:italic">turn.</span></h2>
+      <a href="contact.html" style="display:inline-flex;align-items:center;background:#FDF7EE;color:#1F2D3D;padding:19px 34px;font-size:13px;letter-spacing:.2em;text-transform:uppercase;position:relative;overflow:hidden;transition:transform .4s cubic-bezier(.2,.75,.2,1),box-shadow .4s,background .4s,color .4s" data-cta="" style-hover="background:#1F2D3D;color:#FDF7EE">Let’s talk stories</a>
     </div>
   </section>
 
   <div aria-hidden="true" style="height:8px;background:linear-gradient(90deg,rgba(220,91,46,0) 0%,#DC5B2E 18%,#F0B429 50%,#DC5B2E 82%,rgba(220,91,46,0) 100%);background-size:220% 100%;animation:wojshift 11s ease-in-out infinite"></div>
-
-  <section data-reveal="" style="opacity:0;transform:translateY(24px);padding:88px 48px 96px;display:flex;flex-direction:column;align-items:center;gap:28px;text-align:center">
-    <svg width="0" height="0" viewBox="0 0 100 60" fill="none" style="display:none" aria-hidden="true">
-      <defs><linearGradient id="svcSunCta" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#DC5B2E"></stop><stop offset="100%" stop-color="#F0B429"></stop></linearGradient></defs>
-      <path d="M31 43 A19 19 0 0 1 69 43 Z" fill="url(#svcSunCta)"></path>
-      <line x1="2" y1="43" x2="98" y2="43" stroke="#1F2D3D" stroke-width="2.6"></line>
-    </svg>
-    <div style="font-family:'Playfair Display',serif;font-size:clamp(28px,3.4vw,44px);line-height:1.2;max-width:760px">So, what are you building? <span style="color:#DC5B2E;font-style:italic">Tell me where it stands and I’ll tell you what I’d do first.</span></div>
-    <a href="contact.html" style="display:inline-flex;align-items:center;background:linear-gradient(100deg,#DC5B2E 0%,#F0B429 50%,#DC5B2E 100%);background-size:220% 100%;animation:wojshift 9s ease-in-out infinite;color:#1F2D3D;padding:19px 34px;transition:transform .3s,box-shadow .3s;font-size:13px;letter-spacing:.2em;text-transform:uppercase;position:relative;overflow:hidden;transition:transform .4s cubic-bezier(.2,.75,.2,1),box-shadow .4s,background .4s,color .4s" data-cta="" style-hover="background:#1F2D3D;color:#FDF7EE">Tell me what you’re building</a>
-  </section>
 
   <div style="height:6px;background:linear-gradient(100deg,#DC5B2E 0%,#F0B429 50%,#DC5B2E 100%);background-size:220% 100%;animation:wojshift 11s ease-in-out infinite"></div>
 
-  <footer style="background:#1F2D3D;color:#FDF7EE;padding:22px 48px">
+  <footer style="background:#FDF7EE;color:#1F2D3D;padding:22px 48px;border-top:1px solid rgba(31,45,61,.12)">
     <div style="max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:40px">
       <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
         <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
           <svg width="74" height="45" viewBox="0 0 100 60" fill="none" style="flex:none">
-            <defs><linearGradient id="svcFootSun" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#DC5B2E"></stop><stop offset="100%" stop-color="#F0B429"></stop></linearGradient></defs>
-            <path d="M31 43 A19 19 0 0 1 69 43 Z" fill="url(#svcFootSun)"></path>
-            <line x1="2" y1="43" x2="98" y2="43" stroke="#FDF7EE" stroke-width="3.4"></line>
+            <defs><linearGradient id="footSunSvc" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#DC5B2E"></stop><stop offset="100%" stop-color="#F0B429"></stop></linearGradient></defs>
+            <path d="M31 43 A19 19 0 0 1 69 43 Z" fill="url(#footSunSvc)"></path>
+            <line x1="2" y1="43" x2="98" y2="43" stroke="#1F2D3D" stroke-width="3.4"></line>
           </svg>
           <span style="display:flex;flex-direction:column;align-items:center;gap:4px">
             <span style="font-family:'Playfair Display',serif;font-size:24px;line-height:1;white-space:nowrap">West of June</span>
-            <span style="font-size:10px;letter-spacing:.44em;text-transform:uppercase;color:#F0B429;padding-left:.44em">Media</span>
+            <span style="font-size:10px;letter-spacing:.44em;text-transform:uppercase;color:#DC5B2E;padding-left:.44em">Media</span>
           </span>
         </div>
-        <span style="font-family:'Playfair Display',serif;font-style:italic;font-size:13px;color:rgba(253,247,238,.6)">Matthew 6:33</span>
+        <span style="font-family:'Playfair Display',serif;font-style:italic;font-size:13px;color:rgba(31,45,61,.55)">Matthew 6:33</span>
       </div>
       <div style="display:flex;gap:30px;font-size:11px;letter-spacing:.18em;text-transform:uppercase">
-        <a href="https://linkedin.com/in/brunavil" target="_blank" style="color:rgba(31,45,61,.7)" style-hover="color:#F0B429">LinkedIn</a>
-        <a href="mailto:bruna@westofjunemedia.com" style="color:rgba(31,45,61,.7)" style-hover="color:#F0B429">Email</a>
+        <a href="https://linkedin.com/in/brunavil" target="_blank" rel="noopener" style="color:rgba(31,45,61,.7)" style-hover="color:#DC5B2E">LinkedIn</a>
+        <a href="mailto:bruna@westofjunemedia.com" style="color:rgba(31,45,61,.7)" style-hover="color:#DC5B2E">Email</a>
       </div>
     </div>
   </footer>
 </div>
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  componentDidMount() {
-    const show = el => { el.style.opacity = 1; el.style.transform = 'translateY(0)'; el.style.filter = 'none'; };
-    setTimeout(() => {
-      const els = document.querySelectorAll('[data-reveal]');
-      els.forEach(el => { el.style.transition = 'opacity 1.05s cubic-bezier(.2,.75,.2,1), transform 1.05s cubic-bezier(.2,.75,.2,1), filter 1.05s ease'; el.style.filter = 'blur(6px)'; });
-      const io = new IntersectionObserver(entries => {
-        entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => show(e.target), i * 70); io.unobserve(e.target); } });
-      }, { threshold: 0.02, rootMargin: '0px 0px -2% 0px' });
-      els.forEach(el => io.observe(el));
-      this._io = io;
-      setTimeout(() => els.forEach(show), 700);
-      document.querySelectorAll('[data-cta]').forEach(btn => {
-        if (btn.dataset.ctaWired) return;
-        btn.dataset.ctaWired = '1';
-        const label = btn.textContent.trim();
-        btn.textContent = '';
-        const txt = document.createElement('span');
-        txt.textContent = label;
-        txt.style.cssText = 'position:relative;display:inline-block;transition:transform .45s cubic-bezier(.2,.75,.2,1)';
-        const arrow = document.createElement('span');
-        arrow.textContent = '\u2192';
-        arrow.style.cssText = 'position:relative;display:inline-block;margin-left:0;max-width:0;opacity:0;overflow:hidden;transform:translateX(-6px);transition:max-width .45s cubic-bezier(.2,.75,.2,1),opacity .35s ease,margin-left .45s,transform .45s cubic-bezier(.2,.75,.2,1)';
-        btn.appendChild(txt); btn.appendChild(arrow);
-        btn.addEventListener('mouseenter', () => {
-          btn.style.transform = 'translateY(-3px)';
-          btn.style.boxShadow = '0 14px 34px rgba(220,91,46,.32)';
-          arrow.style.maxWidth = '2em'; arrow.style.opacity = '1';
-          arrow.style.marginLeft = '12px'; arrow.style.transform = 'translateX(0)';
-        });
-        btn.addEventListener('mouseleave', () => {
-          btn.style.transform = 'translateY(0)';
-          btn.style.boxShadow = 'none';
-          arrow.style.maxWidth = '0'; arrow.style.opacity = '0';
-          arrow.style.marginLeft = '0'; arrow.style.transform = 'translateX(-6px)';
-        });
-      });
-    const lift = (sel, y) => document.querySelectorAll(sel).forEach(el => {
-      el.style.transition = (el.style.transition ? el.style.transition + ', ' : '') + 'transform .45s cubic-bezier(.2,.75,.2,1)';
-      el.addEventListener('mouseenter', () => { el.style.transform = 'translateY(' + y + 'px)'; });
-      el.addEventListener('mouseleave', () => { el.style.transform = 'translateY(0)'; });
-    });
-      const svcRows = [...document.querySelectorAll('[data-svc-row]')];
-      if (window.matchMedia('(hover: none)').matches) {
-        const io = new IntersectionObserver(entries => {
-          entries.forEach(en => {
-            en.target.dispatchEvent(new Event(en.isIntersecting ? 'mouseenter' : 'mouseleave'));
-          });
-        }, { rootMargin: '-42% 0px -42% 0px', threshold: 0 });
-        svcRows.forEach(r => io.observe(r));
-      }
-      svcRows.forEach(row => {
-        const bar = row.querySelector('[data-svc-bar]');
-        const num = row.querySelector('[data-svc-num]');
-        const nm = row.querySelector('[data-svc-name]');
-        const kicker = nm && nm.nextElementSibling;
-        const copy = row.querySelector('p');
-        row.style.transition = 'background .55s ease, padding .55s cubic-bezier(.2,.75,.2,1), box-shadow .55s ease';
-        if (num) num.style.transition = (num.style.transition || '') + ', opacity .5s ease, transform .6s cubic-bezier(.2,.75,.2,1)';
-        if (num) num.style.transformOrigin = '0% 50%';
-        if (kicker) kicker.style.transition = 'letter-spacing .6s cubic-bezier(.2,.75,.2,1), color .5s';
-        if (copy) copy.style.transition = 'color .5s ease';
-        row.addEventListener('mouseenter', () => {
-          if (bar) bar.style.width = '100%';
-          if (num) { num.style.opacity = '1'; num.style.transform = 'scale(1.12)'; }
-          if (nm) nm.style.color = '#F0B429';
-          if (kicker) { kicker.style.letterSpacing = '.34em'; kicker.style.color = '#DC5B2E'; }
-          if (copy) copy.style.color = 'rgba(253,247,238,.92)';
-          row.style.background = 'linear-gradient(100deg, #1F2D3D 0%, #24344A 62%, #2B3E56 100%)';
-          row.style.paddingLeft = '22px';
-          row.style.paddingRight = '22px';
-          row.style.boxShadow = '0 22px 54px rgba(31,45,61,.28)';
-        });
-        row.addEventListener('mouseleave', () => {
-          if (bar) bar.style.width = '0';
-          if (num) { num.style.opacity = '.3'; num.style.transform = 'scale(1)'; }
-          if (nm) nm.style.color = '#1F2D3D';
-          if (kicker) { kicker.style.letterSpacing = '.26em'; kicker.style.color = '#DC5B2E'; }
-          if (copy) copy.style.color = 'rgba(31,45,61,.85)';
-          row.style.background = 'transparent';
-          row.style.paddingLeft = '0px';
-          row.style.paddingRight = '0px';
-          row.style.boxShadow = 'none';
-        });
-      });
-    }, 30);
-  }
-  componentWillUnmount() { if (this._io) this._io.disconnect(); }
-  renderVals() { return {}; }
-}
-</script>
+<script src="site.js"></script>
 </body>
 </html>

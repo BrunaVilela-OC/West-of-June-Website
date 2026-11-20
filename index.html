@@ -1,15 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+<title>Bruna Vilela, Creative Producer and Showrunner | West of June Media</title>
+<meta name="description" content="Bruna Vilela is a creative producer and showrunner who develops original, story-driven content and runs the productions that bring it to life.">
+<meta name="author" content="Bruna Vilela">
+<link rel="canonical" href="https://westofjunemedia.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="West of June Media">
+<meta property="og:title" content="Bruna Vilela, Creative Producer and Showrunner | West of June Media">
+<meta property="og:description" content="Bruna Vilela is a creative producer and showrunner who develops original, story-driven content and runs the productions that bring it to life.">
+<meta property="og:url" content="https://westofjunemedia.com/">
+<meta property="og:image" content="https://westofjunemedia.com/assets/bruna-headshot.jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;family=Jost:wght@300;400;500&amp;family=Caveat:wght@400;500&amp;display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; }
   body { margin: 0; background: #FDF7EE; color: #1F2D3D; }
@@ -36,7 +44,7 @@
     [style*="grid-template-columns"] { grid-template-columns: minmax(0,1fr) !important; }
     [data-m-photos] { grid-template-columns: repeat(2,minmax(0,1fr)) !important; }
     h1 [style*="nowrap"], h2 [style*="nowrap"] { white-space: normal !important; }
-    img, svg, iframe, image-slot { max-width: 100%; }
+    img, svg, iframe { max-width: 100%; }
     footer > div, [data-home-footer] { flex-wrap: wrap !important; row-gap: 24px !important; }
     [style*="text-align: right"] { text-align: left !important; }
     [style*="gap: 88px"], [style*="gap: 80px"], [style*="gap: 72px"], [style*="gap: 64px"], [style*="gap: 56px"], [style*="gap: 48px"], [style*="gap: 44px"] { gap: 34px !important; }
@@ -53,7 +61,7 @@
     /* nav becomes two rows: lockup centred, then full-width menu at readable size */
     nav { position: static !important; padding: 0 !important; }
     [data-nav-inner] { flex-direction: column !important; flex-wrap: nowrap !important; align-items: stretch !important; gap: 0 !important; padding: 0 !important; }
-    [data-nav-logo] { gap: 6px !important; padding: 16px 18px 14px !important; }
+    [data-nav-logo] { gap: 11px !important; padding: 16px 18px 14px !important; justify-content: center !important; }
     [data-nav-logo] > svg { width: 58px !important; height: 35px !important; }
     [data-nav-logo] span span:first-child { font-size: 21px !important; }
     [data-nav-logo] span span:last-child { font-size: 9px !important; letter-spacing: .38em !important; }
@@ -85,27 +93,74 @@
     [data-nav-links] > a { padding: 0 2px !important; }
     [data-cta] { font-size: 12px !important; letter-spacing: .1em !important; padding-left: 18px !important; padding-right: 18px !important; }
   }
+  [data-venn2] { position: relative; width: 100%; max-width: 840px; margin: 52px auto 0; aspect-ratio: 840 / 600; }
+  [data-venn2-ink] { position: absolute; inset: 0; width: 100%; height: 100%; }
+  [data-venn2-ink="tall"] { display: none; }
+  [data-venn2-icon] { display: block; margin: 0 auto; width: 58px; height: auto; }
+  [data-venn2-side] { position: absolute; top: 43.3%; transform: translateY(-50%); text-align: center; }
+  [data-venn2-side="creative"] { left: 4%; width: 29%; }
+  [data-venn2-side="producer"] { right: 4%; width: 29%; }
+  [data-venn2-title] { margin: 10px 0 0; font-family: 'Playfair Display', serif; font-weight: 600; font-size: 31px !important; line-height: 1.12 !important; text-wrap: balance; color: #FDF7EE; }
+  [data-venn2-ask] { margin: 7px 0 16px; font-family: 'Playfair Display', serif; font-style: italic; font-size: 20px !important; line-height: 1.2 !important; }
+  [data-venn2-side="creative"] [data-venn2-ask] { color: #E8734A; }
+  [data-venn2-side="producer"] [data-venn2-ask] { color: #F0B429; }
+  [data-venn2-list] { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+  [data-venn2-list] li { font-size: 16.5px !important; line-height: 1.42 !important; font-weight: 400; color: rgba(253,247,238,.9); }
+  [data-venn2-mid] { position: absolute; left: 50%; top: 43.3%; transform: translate(-50%,-50%); width: 20%; text-align: center; }
+  [data-venn2-mid] p { margin: 0; font-family: 'Playfair Display', serif; font-style: italic; font-size: 21px !important; line-height: 1.22 !important; color: #1F2D3D; }
+  [data-venn2-note] { position: absolute; left: 50%; top: 90.5%; transform: translateX(-50%); width: 56%; text-align: center; font-family: Caveat, 'Segoe Script', cursive; font-size: 27px; line-height: 1.2; color: #E8734A; }
+  @media (max-width: 760px) {
+    [data-hero-intro] { font-size: 25px !important; }
+    [data-annot] span { font-size: 21px !important; }
+    [data-venn2] { aspect-ratio: 352 / 650; max-width: 352px; margin-top: 40px; }
+    [data-venn2-ink="wide"] { display: none; }
+    [data-venn2-ink="tall"] { display: block; }
+    [data-venn2-icon] { width: 40px !important; }
+    [data-venn2-side] { top: 18.3% !important; }
+    [data-venn2-side="creative"] { left: 8% !important; right: auto !important; width: 84% !important; }
+    [data-venn2-side="producer"] { left: 8% !important; right: auto !important; width: 84% !important; top: 71.8% !important; }
+    [data-venn2-title] { font-size: 22px !important; margin-top: 6px; }
+    [data-venn2-ask] { font-size: 17px !important; margin: 5px 0 10px; }
+    [data-venn2-list] { gap: 3px; }
+    [data-venn2-list] li { font-size: 14px !important; }
+    [data-venn2-mid] { top: 45.1% !important; width: 76% !important; }
+    [data-venn2-mid] p { font-size: 17px !important; }
+    [data-venn2-note] { top: 95% !important; width: 82% !important; font-size: 23px !important; }
+  }
+  [data-excited-inner] { max-width: 1080px; margin: 0 auto; }
+  [data-excited-eyebrow] { display: flex; align-items: center; gap: 14px; font-size: 11px; letter-spacing: .32em; text-transform: uppercase; color: #DC5B2E; margin-bottom: 28px; }
+  [data-excited-h] { margin: 0; font-family: 'Playfair Display', serif; font-weight: 400; font-size: clamp(34px,4.4vw,58px) !important; line-height: 1.16 !important; letter-spacing: -.02em; color: #1F2D3D; }
+  [data-excited-hand] { display: inline; font-family: Caveat, 'Segoe Script', cursive; font-size: clamp(46px,6.2vw,84px); line-height: 1.12; letter-spacing: 0; color: #C2522A; }
+  [data-excited-hand] svg { display: inline-block; width: 62px; height: auto; margin-left: 20px; vertical-align: .12em; }
+  [data-excited-sun] { position: absolute; right: 6%; bottom: 0; width: min(420px, 38%); pointer-events: none; }
+  [data-excited-disc] { position: relative; width: 100%; aspect-ratio: 2 / 1; background: linear-gradient(180deg,#F0B429 0%,#DC5B2E 100%); border-radius: 999px 999px 0 0; transform-origin: 50% 100%; animation: wojsunR 14s ease-in-out infinite; }
+  [data-excited-body] { margin: 34px 0 0; max-width: 560px; font-size: 19px !important; line-height: 1.75 !important; font-weight: 300; color: rgba(31,45,61,.85); text-wrap: pretty; }
+  @media (max-width: 760px) {
+    [data-excited] { padding-top: 76px !important; padding-bottom: 180px !important; }
+    [data-excited-hand] svg { width: 44px; margin-left: 14px; }
+    [data-excited-body] { margin-top: 26px; }
+    [data-excited-sun] { right: auto !important; left: 50% !important; transform: translateX(-50%); width: min(290px, 68%) !important; }
+  }
 </style>
-<script src="journey.js"></script>
-</helmet>
+</head>
+<body>
 <div style="font-family:Jost,system-ui,sans-serif;background:#FDF7EE;color:#1F2D3D">
-
   <nav style="position:sticky;top:0;z-index:40;padding:0 48px;background:rgba(253,247,238,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(31,45,61,.1)">
     <div data-nav-inner="" style="max-width:1180px;margin:0 auto;padding:20px 0;display:flex;align-items:center;justify-content:space-between">
-    <a data-nav-logo="" href="/" style="display:flex;flex-direction:column;align-items:center;gap:8px;color:#1F2D3D">
+    <a data-nav-logo="" href="index.html" style="display:flex;flex-direction:row;align-items:center;gap:15px;color:#1F2D3D">
       <svg width="74" height="45" viewBox="0 0 100 60" fill="none" style="flex:none">
         <defs><linearGradient id="navSunHome" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#DC5B2E"></stop><stop offset="100%" stop-color="#F0B429"></stop></linearGradient></defs>
         <path d="M31 43 A19 19 0 0 1 69 43 Z" fill="url(#navSunHome)"></path>
         <line x1="2" y1="43" x2="98" y2="43" stroke="#1F2D3D" stroke-width="3.4"></line>
       </svg>
-      <span style="display:flex;flex-direction:column;align-items:center;gap:4px">
+      <span style="display:flex;flex-direction:column;align-items:flex-start;gap:4px">
         <span style="font-family:'Playfair Display',serif;font-size:24px;line-height:1;white-space:nowrap">West of June</span>
-        <span style="font-size:10px;letter-spacing:.44em;text-transform:uppercase;color:#DC5B2E;padding-left:.44em">Media</span>
+        <span style="font-size:10px;letter-spacing:.44em;text-transform:uppercase;color:#DC5B2E">Media</span>
       </span>
     </a>
     <div data-nav-links="" style="display:flex;align-items:center;gap:34px;font-size:13px;letter-spacing:.16em;text-transform:uppercase">
-      <a href="work.html" style="color:#1F2D3D" style-hover="color:#DC5B2E">My Work</a>
-      <a href="services.html" style="color:#1F2D3D" style-hover="color:#DC5B2E">How I Help</a>
+      <a href="services.html" style="color:#1F2D3D" style-hover="color:#DC5B2E">What I Do</a>
+      <a href="work.html" style="color:#1F2D3D" style-hover="color:#DC5B2E">Portfolio</a>
       <a href="about.html" style="color:#1F2D3D" style-hover="color:#DC5B2E">My Story</a>
       <a href="contact.html" style="color:#1F2D3D;padding:10px 20px;border:1px solid rgba(31,45,61,.35)" style-hover="background:#1F2D3D;color:#FDF7EE">Let’s Talk</a>
     </div>
@@ -114,43 +169,150 @@
 
   <div style="height:6px;background:linear-gradient(100deg,#DC5B2E 0%,#F0B429 50%,#DC5B2E 100%);background-size:220% 100%;animation:wojshift 11s ease-in-out infinite"></div>
 
-  <section style="display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.82fr);gap:88px;align-items:center;padding:110px 48px 150px;max-width:1180px;margin:0 auto;min-height:86vh">
+  <section style="display:grid;grid-template-columns:minmax(0,1.18fr) minmax(0,.78fr);gap:64px;align-items:center;padding:110px 48px 150px;max-width:1180px;margin:0 auto;min-height:86vh">
     <div>
-      <div data-reveal="" style="opacity:0;transform:translateY(24px);font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:#DC5B2E;margin-bottom:26px">Creative production &amp; showrunning for YouTube and creator-led media</div>
-      <h1 data-reveal="" style="opacity:0;transform:translateY(24px);font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(44px,5.2vw,76px);line-height:1.02;letter-spacing:-.025em;margin:0 0 34px">Hi, I’m Bruna.<br><span style="color:#DC5B2E;font-style:italic;white-space:nowrap">I run your show.</span></h1>
-      <p data-reveal="" style="opacity:0;transform:translateY(24px);max-width:540px;font-size:19px;line-height:1.75;font-weight:300;color:rgba(31,45,61,.85);text-wrap:pretty;margin:0 0 38px">I started this the way you started your channel. One June morning, an idea I believed in and the decision to go build it. That is the whole point of the name: the horizon, the unknown, the bet that something better is out there. If you’re taking a creative swing, I’d love to join the adventure.</p>
+      <div data-reveal="" style="opacity:0;transform:translateY(24px);font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:#DC5B2E;margin-bottom:22px;display:flex;align-items:center;gap:14px"><span aria-hidden="true" style="display:block;width:34px;height:1px;background:#DC5B2E;flex:none"></span><span>Creative Producer &amp; Showrunner</span></div>
+      <div data-hero-intro="" data-reveal="" style="opacity:0;transform:translateY(24px);font-family:Caveat,'Segoe Script',cursive;font-size:31px;line-height:1;color:rgba(31,45,61,.8);margin:0 0 12px">Hi, I’m Bruna.</div>
+      <h1 data-reveal="" style="opacity:0;transform:translateY(24px);font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(46px,6.6vw,94px);line-height:1.04;letter-spacing:-.03em;margin:0 0 24px"><span style="display:block">A <span style="position:relative;display:inline-block">storyteller<svg aria-hidden="true" viewBox="0 0 200 12" preserveAspectRatio="none" style="position:absolute;left:-1.5%;bottom:-.16em;width:103%;height:.2em;overflow:visible"><path d="M2 8C38 3 74 10.4 112 5.6 146 1.6 172 9.2 198 4.4" fill="none" stroke="#DC5B2E" stroke-width="3.2" stroke-linecap="round" vector-effect="non-scaling-stroke"></path></svg></span></span><span style="display:block">with a <span style="position:relative;display:inline-block">production brain<svg aria-hidden="true" viewBox="0 0 200 14" preserveAspectRatio="none" style="position:absolute;left:-1.5%;bottom:-.2em;width:103%;height:.24em;overflow:visible"><path d="M2 7C44 2.4 92 9.6 140 5 170 2.2 184 8.4 198 5" fill="none" stroke="#F0B429" stroke-width="3.4" stroke-linecap="round" vector-effect="non-scaling-stroke"></path><path d="M5 11.4C54 7.2 106 12.6 197 8.8" fill="none" stroke="#F0B429" stroke-width="1.5" stroke-linecap="round" opacity=".5" vector-effect="non-scaling-stroke"></path></svg></span></span></h1>
+      <p data-reveal="" style="opacity:0;transform:translateY(24px);max-width:540px;font-size:19px;line-height:1.75;font-weight:300;color:rgba(31,45,61,.85);text-wrap:pretty;margin:0 0 38px">I love being in the room when an idea is born and being there when it becomes real. From developing original stories to figuring out how to pull them off, I live somewhere between the creative and the practical.</p>
       <div data-reveal="" style="opacity:0;transform:translateY(24px);animation:wojphoto 1s cubic-bezier(.2,.75,.2,1) .55s both;display:flex;align-items:center;gap:28px;flex-wrap:wrap">
-        <a href="contact.html" style="display:inline-flex;align-items:center;background:linear-gradient(100deg,#DC5B2E 0%,#F0B429 50%,#DC5B2E 100%);background-size:220% 100%;animation:wojshift 9s ease-in-out infinite;color:#1F2D3D;padding:19px 34px;font-size:13px;letter-spacing:.2em;text-transform:uppercase;position:relative;overflow:hidden;transition:transform .4s cubic-bezier(.2,.75,.2,1),box-shadow .4s,background .4s,color .4s" data-cta="" style-hover="background:#1F2D3D;color:#FDF7EE">Head west with me</a>
-        <a href="work.html" style="font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:rgba(31,45,61,.6);border-bottom:1px solid rgba(31,45,61,.25);padding-bottom:4px;transition:color .4s" data-cta-quiet="" style-hover="color:#1F2D3D">See the work</a>
+        <a href="work.html" style="display:inline-flex;align-items:center;background:linear-gradient(100deg,#DC5B2E 0%,#F0B429 50%,#DC5B2E 100%);background-size:220% 100%;animation:wojshift 9s ease-in-out infinite;color:#1F2D3D;padding:19px 34px;font-size:13px;letter-spacing:.2em;text-transform:uppercase;position:relative;overflow:hidden;transition:transform .4s cubic-bezier(.2,.75,.2,1),box-shadow .4s,background .4s,color .4s" data-cta="" style-hover="background:#1F2D3D;color:#FDF7EE">Explore my work</a>
+        <a href="about.html" style="font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:rgba(31,45,61,.6);border-bottom:1px solid rgba(31,45,61,.25);padding-bottom:4px;transition:color .4s" data-cta-quiet="" style-hover="color:#1F2D3D">More about me</a>
       </div>
     </div>
-    <div style="position:relative;display:flex;justify-content:center">
-      <div ref="{{ photoRef }}" style="position:relative;width:100%;aspect-ratio:4/5;overflow:hidden;background:#1F2D3D;animation:wojphoto 1.4s cubic-bezier(.2,.75,.2,1) both">
+    <div style="position:relative;display:flex;flex-direction:column;align-items:stretch">
+      <div data-parallax="0.04" style="position:relative;width:100%;aspect-ratio:4/5;overflow:hidden;background:#1F2D3D;animation:wojphoto 1.4s cubic-bezier(.2,.75,.2,1) both">
         <img src="assets/bruna-headshot.jpeg" alt="Bruna Vilela" style="width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block">
+        <div aria-hidden="true" style="position:absolute;top:16px;left:16px;width:28px;height:28px;border-top:2px solid rgba(240,180,41,.9);border-left:2px solid rgba(240,180,41,.9);pointer-events:none"></div>
+        <div aria-hidden="true" style="position:absolute;bottom:16px;right:16px;width:28px;height:28px;border-bottom:2px solid rgba(240,180,41,.9);border-right:2px solid rgba(240,180,41,.9);pointer-events:none"></div>
+      </div>
+      <div data-annot="" data-reveal="" style="opacity:0;transform:translateY(24px);display:flex;align-items:flex-start;gap:11px;margin:16px 0 0">
+        <svg aria-hidden="true" width="24" height="36" viewBox="0 0 24 36" fill="none" style="flex:none">
+          <path d="M15 34C10.6 25.4 15 14.6 9 4.5" stroke="#B8471F" stroke-width="1.7" stroke-linecap="round"></path>
+          <path d="M9 4.5L4.4 13.4" stroke="#B8471F" stroke-width="1.7" stroke-linecap="round"></path>
+          <path d="M9 4.5L17.2 9.2" stroke="#B8471F" stroke-width="1.7" stroke-linecap="round"></path>
+        </svg>
+        <span style="font-family:Caveat,'Segoe Script',cursive;font-size:23px;line-height:1.25;color:#B8471F">the creative half and the practical half, same person</span>
       </div>
     </div>
   </section>
 
   <div aria-hidden="true" style="height:8px;background:linear-gradient(90deg,rgba(220,91,46,0) 0%,#DC5B2E 18%,#F0B429 50%,#DC5B2E 82%,rgba(220,91,46,0) 100%);background-size:220% 100%;animation:wojshift 11s ease-in-out infinite"></div>
 
-  <section style="position:relative;overflow:hidden;padding:0 48px;background:#1F2D3D;color:#FDF7EE;text-align:center">
+  <section style="position:relative;overflow:hidden;background:#1F2D3D;padding:96px 48px 104px">
+    <div aria-hidden="true" style="position:absolute;inset:0;opacity:.3;pointer-events:none;background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22180%22 height=%22180%22%3E%3Cfilter id=%22g%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22180%22 height=%22180%22 filter=%22url(%23g)%22 opacity=%220.09%22/%3E%3C/svg%3E')"></div>
+    <div style="position:relative;max-width:1080px;margin:0 auto">
+      <h2 data-reveal="" style="opacity:0;transform:translateY(24px);margin:0;font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(34px,4.4vw,60px);line-height:1.06;letter-spacing:-.025em;text-align:center;color:#FDF7EE">Two hats. One very <span style="font-style:italic;color:#E8734A">curious</span> brain.</h2>
+      <div data-venn2="" data-reveal="" style="opacity:0;transform:translateY(24px)">
+        <svg data-venn2-ink="wide" aria-hidden="true" viewBox="0 0 840 600">
+          <defs>
+            <radialGradient id="wojAW" cx="74%" cy="50%" r="78%"><stop offset="0%" stop-color="#FF9566" stop-opacity=".60"></stop><stop offset="45%" stop-color="#E8734A" stop-opacity=".30"></stop><stop offset="100%" stop-color="#DC5B2E" stop-opacity=".08"></stop></radialGradient>
+            <radialGradient id="wojBW" cx="26%" cy="50%" r="78%"><stop offset="0%" stop-color="#FFD06A" stop-opacity=".52"></stop><stop offset="45%" stop-color="#F0B429" stop-opacity=".26"></stop><stop offset="100%" stop-color="#F0B429" stop-opacity=".07"></stop></radialGradient>
+            <linearGradient id="wojLensW" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F5CA69"></stop><stop offset="100%" stop-color="#E0864A"></stop></linearGradient>
+            <filter id="wojSoftW" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="22"></feGaussianBlur></filter>
+            <filter id="wojHaloW" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="7"></feGaussianBlur></filter>
+            <clipPath id="wojClipW"><path d="M258 6C398 4 510 118 512 258C514 398 398 516 256 514C114 512 6 398 4 258C2 116 116 4 258 6Z"></path></clipPath>
+          </defs>
+          <ellipse cx="419" cy="260" rx="120" ry="215" fill="#F0B429" opacity=".22" filter="url(#wojSoftW)"></ellipse>
+          <path d="M258 6C398 4 510 118 512 258C514 398 398 516 256 514C114 512 6 398 4 258C2 116 116 4 258 6Z" fill="url(#wojAW)"></path>
+          <path d="M580 6C720 4 832 118 834 258C836 398 720 516 578 514C436 512 328 398 326 258C324 116 438 4 580 6Z" fill="url(#wojBW)"></path>
+          <g clip-path="url(#wojClipW)"><path d="M580 6C720 4 832 118 834 258C836 398 720 516 578 514C436 512 328 398 326 258C324 116 438 4 580 6Z" fill="url(#wojLensW)"></path></g>
+          <path d="M258 6C398 4 510 118 512 258C514 398 398 516 256 514C114 512 6 398 4 258C2 116 116 4 258 6Z" fill="none" stroke="#E8734A" stroke-width="8" opacity=".2" filter="url(#wojHaloW)"></path>
+          <path d="M580 6C720 4 832 118 834 258C836 398 720 516 578 514C436 512 328 398 326 258C324 116 438 4 580 6Z" fill="none" stroke="#F0B429" stroke-width="8" opacity=".2" filter="url(#wojHaloW)"></path>
+          <path d="M258 6C398 4 510 118 512 258C514 398 398 516 256 514C114 512 6 398 4 258C2 116 116 4 258 6Z" fill="none" stroke="#E8734A" stroke-width="1.9"></path>
+          <path d="M580 6C720 4 832 118 834 258C836 398 720 516 578 514C436 512 328 398 326 258C324 116 438 4 580 6Z" fill="none" stroke="#F0B429" stroke-width="1.9"></path>
+          <path d="M566 546C514 534 456 492 424 426" fill="none" stroke="#E8734A" stroke-width="2.2" stroke-linecap="round"></path>
+          <path d="M424 426L441 433" fill="none" stroke="#E8734A" stroke-width="2.2" stroke-linecap="round"></path>
+          <path d="M424 426L429 447" fill="none" stroke="#E8734A" stroke-width="2.2" stroke-linecap="round"></path>
+        </svg>
+        <svg data-venn2-ink="tall" aria-hidden="true" viewBox="0 0 352 650">
+          <defs>
+            <radialGradient id="wojAT" cx="50%" cy="74%" r="78%"><stop offset="0%" stop-color="#FF9566" stop-opacity=".60"></stop><stop offset="45%" stop-color="#E8734A" stop-opacity=".30"></stop><stop offset="100%" stop-color="#DC5B2E" stop-opacity=".08"></stop></radialGradient>
+            <radialGradient id="wojBT" cx="50%" cy="26%" r="78%"><stop offset="0%" stop-color="#FFD06A" stop-opacity=".52"></stop><stop offset="45%" stop-color="#F0B429" stop-opacity=".26"></stop><stop offset="100%" stop-color="#F0B429" stop-opacity=".07"></stop></radialGradient>
+            <linearGradient id="wojLensT" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F5CA69"></stop><stop offset="100%" stop-color="#E0864A"></stop></linearGradient>
+            <filter id="wojSoftT" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="22"></feGaussianBlur></filter>
+            <filter id="wojHaloT" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="7"></feGaussianBlur></filter>
+            <clipPath id="wojClipT"><path d="M176 6C268 4 348 86 350 180C352 274 270 356 174 354C80 352 2 272 2 180C2 86 82 4 176 6Z"></path></clipPath>
+          </defs>
+          <ellipse cx="176" cy="293" rx="150" ry="75" fill="#F0B429" opacity=".22" filter="url(#wojSoftT)"></ellipse>
+          <path d="M176 6C268 4 348 86 350 180C352 274 270 356 174 354C80 352 2 272 2 180C2 86 82 4 176 6Z" fill="url(#wojAT)"></path>
+          <path d="M176 232C268 230 348 312 350 406C352 500 270 582 174 580C80 578 2 498 2 406C2 312 82 230 176 232Z" fill="url(#wojBT)"></path>
+          <g clip-path="url(#wojClipT)"><path d="M176 232C268 230 348 312 350 406C352 500 270 582 174 580C80 578 2 498 2 406C2 312 82 230 176 232Z" fill="url(#wojLensT)"></path></g>
+          <path d="M176 6C268 4 348 86 350 180C352 274 270 356 174 354C80 352 2 272 2 180C2 86 82 4 176 6Z" fill="none" stroke="#E8734A" stroke-width="8" opacity=".2" filter="url(#wojHaloT)"></path>
+          <path d="M176 232C268 230 348 312 350 406C352 500 270 582 174 580C80 578 2 498 2 406C2 312 82 230 176 232Z" fill="none" stroke="#F0B429" stroke-width="8" opacity=".2" filter="url(#wojHaloT)"></path>
+          <path d="M176 6C268 4 348 86 350 180C352 274 270 356 174 354C80 352 2 272 2 180C2 86 82 4 176 6Z" fill="none" stroke="#E8734A" stroke-width="1.9"></path>
+          <path d="M176 232C268 230 348 312 350 406C352 500 270 582 174 580C80 578 2 498 2 406C2 312 82 230 176 232Z" fill="none" stroke="#F0B429" stroke-width="1.9"></path>
+          <path d="M236 598C282 570 288 452 288 304" fill="none" stroke="#E8734A" stroke-width="2.2" stroke-linecap="round"></path>
+          <path d="M288 304L276 320" fill="none" stroke="#E8734A" stroke-width="2.2" stroke-linecap="round"></path>
+          <path d="M288 304L298 322" fill="none" stroke="#E8734A" stroke-width="2.2" stroke-linecap="round"></path>
+        </svg>
 
-    <div style="position:absolute;left:50%;bottom:190px;width:min(340px,46%);aspect-ratio:2/1;transform:translateX(-50%);background:linear-gradient(180deg,#F0B429 0%,#DC5B2E 100%);border-radius:999px 999px 0 0;transform-origin:50% 100%;animation:wojsunC 14s ease-in-out infinite;pointer-events:none"></div>
-    <div style="position:absolute;left:50%;bottom:190px;width:min(1500px,190%);height:760px;transform:translateX(-50%);background:radial-gradient(circle 560px at 50% 100%,rgba(240,180,41,.42) 0%,rgba(220,91,46,.16) 40%,rgba(31,45,61,0) 78%);transform-origin:50% 100%;animation:wojhaloC 18s ease-in-out infinite;pointer-events:none"></div>
-    <div style="position:absolute;left:0;right:0;bottom:189px;height:2px;background:linear-gradient(90deg,rgba(253,247,238,0) 0%,rgba(253,247,238,.85) 16%,rgba(253,247,238,.85) 84%,rgba(253,247,238,0) 100%);z-index:2;pointer-events:none"></div>
-    <div style="position:absolute;left:0;right:0;bottom:0;height:190px;background:#1F2D3D;pointer-events:none"></div>
+        <div data-venn2-side="creative">
+          <svg data-venn2-icon="" aria-hidden="true" viewBox="0 0 38 40" fill="none">
+            <path d="M19 4.2C12.2 4.2 8 9.1 8 14.6C8 18.9 11.4 21.5 12.6 25.7H25.4C26.6 21.5 30 18.9 30 14.6C30 9.1 25.8 4.2 19 4.2Z" stroke="#E8734A" stroke-width="1.7" stroke-linejoin="round"></path>
+            <path d="M13.4 29.1H24.6" stroke="#E8734A" stroke-width="1.6" stroke-linecap="round"></path>
+            <path d="M14.9 32.5H23.1" stroke="#E8734A" stroke-width="1.6" stroke-linecap="round"></path>
+            <path d="M16.7 35.7H21.3" stroke="#E8734A" stroke-width="1.6" stroke-linecap="round"></path>
+            <path d="M15.8 16.2L17.7 19.4L20.1 16.2L22 19.4" stroke="#E8734A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M33.2 7.6L36.2 5" stroke="#E8734A" stroke-width="1.5" stroke-linecap="round" opacity=".8"></path>
+            <path d="M4.8 7.6L1.8 5" stroke="#E8734A" stroke-width="1.5" stroke-linecap="round" opacity=".8"></path>
+          </svg>
+          <h3 data-venn2-title="">The creative in me.</h3>
+          <p data-venn2-ask="">What if?</p>
+          <ul data-venn2-list="">
+            <li>Big ideas</li>
+            <li>Story development</li>
+            <li>Writing &amp; editorial</li>
+            <li>Concepts &amp; formats</li>
+          </ul>
+        </div>
 
-    <div style="position:relative;max-width:820px;margin:0 auto;padding:120px 48px 200px;display:flex;flex-direction:column;align-items:center;gap:32px">
-      <h2 data-reveal="" style="opacity:0;transform:translateY(24px);margin:0;font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(40px,5.6vw,84px);line-height:1.04;letter-spacing:-.025em;text-shadow:0 3px 40px rgba(31,45,61,.6)">You’re a creator. I keep you <span style="color:#F0B429;font-style:italic">creating.</span></h2>
-      <div data-reveal="" style="opacity:0;transform:translateY(24px);display:flex;flex-direction:column;gap:22px;font-size:20px;font-weight:300;line-height:1.7;color:rgba(253,247,238,.9);max-width:46ch;text-wrap:pretty">
-        <p style="margin:0">You had an idea, you started making it, and it worked. Yay you! Genuinely, that is the hard part and most people never get there. But then the demands grow, and one day you cannot wear every hat anymore without burning out.</p>
-        <p style="margin:0">So I take some of the hats. The story, the editorial calls, and the structure holding them up.</p>
-        <p style="margin:0;font-family:'Playfair Display',serif;font-style:italic;font-size:27px;line-height:1.35;color:#F0B429">Story without structure doesn’t scale.</p>
+        <div data-venn2-side="producer">
+          <svg data-venn2-icon="" aria-hidden="true" viewBox="0 0 40 36" fill="none">
+            <path d="M6 15.8H34V29.6A1.9 1.9 0 0 1 32.1 31.5H7.9A1.9 1.9 0 0 1 6 29.6Z" stroke="#F0B429" stroke-width="1.7" stroke-linejoin="round"></path>
+            <path d="M6 15.8L7.5 8.4L33 5.1L34 12.6Z" stroke="#F0B429" stroke-width="1.7" stroke-linejoin="round"></path>
+            <path d="M14.3 7.5L12.1 14.9" stroke="#F0B429" stroke-width="1.5"></path>
+            <path d="M22.1 6.5L19.9 13.9" stroke="#F0B429" stroke-width="1.5"></path>
+            <path d="M29.7 5.6L27.5 13" stroke="#F0B429" stroke-width="1.5"></path>
+          </svg>
+          <h3 data-venn2-title="">The producer in me.</h3>
+          <p data-venn2-ask="">How do we?</p>
+          <ul data-venn2-list="">
+            <li>Planning &amp; logistics</li>
+            <li>Research &amp; resourcefulness</li>
+            <li>Teams &amp; workflows</li>
+            <li>Making it happen</li>
+          </ul>
+        </div>
+
+        <div data-venn2-mid="">
+          <p>Where the magic happens.</p>
+          <svg aria-hidden="true" viewBox="0 0 120 10" preserveAspectRatio="none" style="display:block;width:62%;height:9px;margin:9px auto 0"><path d="M3 7C26 2.4 62 9 117 3.6" fill="none" stroke="#A8431A" stroke-width="2.4" stroke-linecap="round" vector-effect="non-scaling-stroke"></path></svg>
+        </div>
+
+        <div data-venn2-note="">My favorite place to be.</div>
       </div>
-      <a href="services.html" style="display:inline-flex;align-items:center;background:#FDF7EE;color:#1F2D3D;border:1px solid #FDF7EE;padding:19px 37px;font-size:13px;letter-spacing:.2em;text-transform:uppercase;position:relative;overflow:hidden;transition:transform .4s cubic-bezier(.2,.75,.2,1),box-shadow .4s,background .4s,color .4s" data-cta="" style-hover="background:#1F2D3D;color:#FDF7EE;border-color:#FDF7EE">See how I help</a>
     </div>
+  </section>
 
-    <div style="position:relative;max-width:1180px;margin:0 auto;padding:44px 0;display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:40px;text-align:left">
+  <section data-excited="" style="position:relative;overflow:hidden;background:#FDF7EE;padding:112px 48px 102px">
+    <div data-excited-inner="">
+      <div data-excited-eyebrow="" data-reveal="" style="opacity:0;transform:translateY(24px)"><span aria-hidden="true" style="display:block;width:34px;height:1px;background:#DC5B2E;flex:none"></span><span>What gets me excited</span></div>
+      <h2 data-excited-h="" data-reveal="" style="opacity:0;transform:translateY(24px)"><span style="display:block">Great stories.</span><span style="display:block">Compelling people.</span><span data-excited-hand="">Ideas worth chasing.<svg aria-hidden="true" viewBox="0 0 62 28" fill="none"><path d="M2 22C17 22.6 37 18 56 7" stroke="#C2522A" stroke-width="2.4" stroke-linecap="round"></path><path d="M56 7L43.6 8.8" stroke="#C2522A" stroke-width="2.4" stroke-linecap="round"></path><path d="M56 7L50.4 17.6" stroke="#C2522A" stroke-width="2.4" stroke-linecap="round"></path></svg></span></h2>
+      <p data-excited-body="" data-reveal="" style="opacity:0;transform:translateY(24px)">I’m drawn to ambitious, narrative-driven original content. The kind that makes people curious, takes creative swings, and has the potential to become something bigger than a single video.</p>
+      <div data-reveal="" style="opacity:0;transform:translateY(24px);margin-top:40px">
+        <a href="work.html" style="display:inline-flex;align-items:center;gap:13px;background:linear-gradient(100deg,#DC5B2E 0%,#F0B429 50%,#DC5B2E 100%);background-size:220% 100%;animation:wojshift 9s ease-in-out infinite;color:#1F2D3D;padding:19px 34px;font-size:13px;letter-spacing:.2em;text-transform:uppercase;transition:transform .4s cubic-bezier(.2,.75,.2,1),box-shadow .4s,background .4s,color .4s" data-cta="" style-hover="background:#1F2D3D;color:#FDF7EE">See what I’ve made</a>
+      </div>
+    </div>
+    <div data-excited-sun="" aria-hidden="true">
+      <div data-excited-disc=""></div>
+    </div>
+  </section>
+
+  <section style="position:relative;overflow:hidden;padding:0 48px;background:#1F2D3D;color:#FDF7EE;text-align:center">
+    <div aria-hidden="true" style="position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,rgba(240,180,41,0) 0%,rgba(240,180,41,.9) 14%,rgba(240,180,41,.9) 86%,rgba(240,180,41,0) 100%);pointer-events:none"></div>
+
+    <div style="position:relative;max-width:1180px;margin:0 auto;padding:56px 0 48px;display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:40px;text-align:left">
       <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
         <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
           <svg width="74" height="45" viewBox="0 0 100 60" fill="none" style="flex:none">
@@ -166,91 +328,12 @@
         <span style="font-family:'Playfair Display',serif;font-style:italic;font-size:13px;color:rgba(253,247,238,.5)">Matthew 6:33</span>
       </div>
       <div style="display:flex;gap:30px;font-size:11px;letter-spacing:.18em;text-transform:uppercase">
-        <a href="https://linkedin.com/in/brunavil" target="_blank" style="color:rgba(253,247,238,.6)" style-hover="color:#F0B429">LinkedIn</a>
+        <a href="https://linkedin.com/in/brunavil" target="_blank" rel="noopener" style="color:rgba(253,247,238,.6)" style-hover="color:#F0B429">LinkedIn</a>
         <a href="mailto:bruna@westofjunemedia.com" style="color:rgba(253,247,238,.6)" style-hover="color:#F0B429">Email</a>
       </div>
     </div>
   </section>
 </div>
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  componentDidMount() {
-    this.photoRef = React.createRef();
-    this.forceUpdate();
-    const show = el => { el.style.opacity = 1; el.style.transform = 'translateY(0)'; el.style.filter = 'none'; };
-    setTimeout(() => {
-      const els = document.querySelectorAll('[data-reveal]');
-      els.forEach(el => { el.style.transition = 'opacity 1.05s cubic-bezier(.2,.75,.2,1), transform 1.05s cubic-bezier(.2,.75,.2,1), filter 1.05s ease'; el.style.filter = 'blur(6px)'; });
-      const io = new IntersectionObserver(entries => {
-        entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => show(e.target), i * 70); io.unobserve(e.target); } });
-      }, { threshold: 0.02, rootMargin: '0px 0px -2% 0px' });
-      els.forEach(el => io.observe(el));
-      this._io = io;
-      setTimeout(() => els.forEach(show), 700);
-document.querySelectorAll('[data-cta-quiet]').forEach(link => {
-        if (link.dataset.quietWired) return;
-        link.dataset.quietWired = '1';
-        const arrow = document.createElement('span');
-        arrow.textContent = '\u2192';
-        arrow.style.cssText = 'display:inline-block;max-width:0;opacity:0;overflow:hidden;margin-left:0;transform:translateX(-6px);transition:max-width .45s cubic-bezier(.2,.75,.2,1),opacity .35s,margin-left .45s,transform .45s cubic-bezier(.2,.75,.2,1)';
-        link.appendChild(arrow);
-        link.addEventListener('mouseenter', () => {
-          arrow.style.maxWidth = '2em'; arrow.style.opacity = '1';
-          arrow.style.marginLeft = '10px'; arrow.style.transform = 'translateX(0)';
-        });
-        link.addEventListener('mouseleave', () => {
-          arrow.style.maxWidth = '0'; arrow.style.opacity = '0';
-          arrow.style.marginLeft = '0'; arrow.style.transform = 'translateX(-6px)';
-        });
-      });
-      document.querySelectorAll('[data-cta]').forEach(btn => {
-        if (btn.dataset.ctaWired) return;
-        btn.dataset.ctaWired = '1';
-        const label = btn.textContent.trim();
-        btn.textContent = '';
-        const txt = document.createElement('span');
-        txt.textContent = label;
-        txt.style.cssText = 'position:relative;display:inline-block;transition:transform .45s cubic-bezier(.2,.75,.2,1)';
-        const arrow = document.createElement('span');
-        arrow.textContent = '\u2192';
-        arrow.style.cssText = 'position:relative;display:inline-block;margin-left:0;max-width:0;opacity:0;overflow:hidden;transform:translateX(-6px);transition:max-width .45s cubic-bezier(.2,.75,.2,1),opacity .35s ease,margin-left .45s,transform .45s cubic-bezier(.2,.75,.2,1)';
-        btn.appendChild(txt); btn.appendChild(arrow);
-        btn.addEventListener('mouseenter', () => {
-          btn.style.transform = 'translateY(-3px)';
-          btn.style.boxShadow = '0 14px 34px rgba(220,91,46,.32)';
-          arrow.style.maxWidth = '2em'; arrow.style.opacity = '1';
-          arrow.style.marginLeft = '12px'; arrow.style.transform = 'translateX(0)';
-        });
-        btn.addEventListener('mouseleave', () => {
-          btn.style.transform = 'translateY(0)';
-          btn.style.boxShadow = 'none';
-          arrow.style.maxWidth = '0'; arrow.style.opacity = '0';
-          arrow.style.marginLeft = '0'; arrow.style.transform = 'translateX(-6px)';
-        });
-      });
-    const lift = (sel, y) => document.querySelectorAll(sel).forEach(el => {
-      el.style.transition = (el.style.transition ? el.style.transition + ', ' : '') + 'transform .45s cubic-bezier(.2,.75,.2,1)';
-      el.addEventListener('mouseenter', () => { el.style.transform = 'translateY(' + y + 'px)'; });
-      el.addEventListener('mouseleave', () => { el.style.transform = 'translateY(0)'; });
-    });
-      document.querySelectorAll('[data-row]').forEach(el => {
-        el.addEventListener('mouseenter', () => { el.style.paddingLeft = '20px'; });
-        el.addEventListener('mouseleave', () => { el.style.paddingLeft = '0px'; });
-      });
-    }, 30);
-    this._onScroll = () => {
-      const y = window.scrollY || 0;
-      if (this.photoRef.current) this.photoRef.current.style.transform = 'translateY(' + (-y * 0.04).toFixed(1) + 'px)';
-    };
-    window.addEventListener('scroll', this._onScroll, { passive: true });
-  }
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this._onScroll);
-    if (this._io) this._io.disconnect();
-  }
-  renderVals() { return { photoRef: this.photoRef }; }
-}
-</script>
+<script src="site.js"></script>
 </body>
 </html>
