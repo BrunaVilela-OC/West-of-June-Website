@@ -153,10 +153,16 @@
       var title = row.querySelector('[data-title]');
       var arts = row.querySelectorAll('[data-art]');
       var dim = row.dataset.artDim || '.86';
+      /* Hover colours come from the band's own theme variables, so a cream band
+         warms to terracotta instead of the navy band's gold. Leaving the row
+         clears the inline colour so the stylesheet decides the resting state. */
+      var hov = function (name, fallback) {
+        return getComputedStyle(row).getPropertyValue(name).trim() || fallback;
+      };
       row.addEventListener('mouseenter', function () {
         if (bar) bar.style.width = '100%';
-        if (num) num.style.color = 'rgba(240,180,41,.52)';
-        if (title) title.style.color = '#F0B429';
+        if (num) num.style.color = hov('--num-hover', 'rgba(240,180,41,.52)');
+        if (title) title.style.color = hov('--title-hover', '#F0B429');
         arts.forEach(function (a) {
           a.style.filter = 'brightness(1)';
           a.style.transform = 'scale(1.02)';
@@ -164,8 +170,8 @@
       });
       row.addEventListener('mouseleave', function () {
         if (bar) bar.style.width = '0';
-        if (num) num.style.color = 'rgba(240,180,41,.26)';
-        if (title) title.style.color = '#FDF7EE';
+        if (num) num.style.removeProperty('color');
+        if (title) title.style.removeProperty('color');
         arts.forEach(function (a) {
           a.style.filter = 'brightness(' + dim + ')';
           a.style.transform = 'scale(1)';
